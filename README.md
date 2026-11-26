@@ -10,7 +10,7 @@ Today's neuron is a stateless weight. It computes, it updates, and it forgets wh
 
 The paper presents the neuron, the toy that ran on the night it was conceived, the design for a language model built from it, and the bench that tested the design under real gradient training at small scale. It shows where the mechanism works as specified and where it does not yet win. Those misses stand in the draft as measured.
 
-One claim in the paper is stated as a claim, not a result: each leg of the neuron can be set up to point to at least 5 other memory points, each a different weight point on the authority param, which would put a 40B parameter model in the space of a 4B model. The logic works out. The bench does not demonstrate it yet.
+The paper also sets out the scale logic. A single state gives a single weight. Two states double the weight ability in the same space. Each leg can point to at least 5 other memory points, each a different weight point on the authority param, and the combinations multiply it further, something like 35x. A 40B parameter model in the space of a 4B model is the same idea as an example. The numbers are examples. The logic is the point.
 
 ## What is in this repo
 

@@ -134,9 +134,9 @@ At each consolidation, a snapshot stores the full tensor state, an ordinary chec
 
 **Signal-path regulation.** The authority signal follows the fast trace until it intersects the slow trace, then the slow takes over. Fast phase carries impact, slow phase carries influence. One signal throughout, never merged. The handoff is seamless in value, the traces are equal at the intersection, and total in provenance, live reading becomes record. This switch is how the signal path is regulated. Resolved on October 26: this intersection handoff is the same switch as the poison flip in section 5.6 step 4. One switch, not two.
 
-### 5.8 Scale by reference: a claim
+### 5.8 Scale by reference
 
-A claim, not a result. Each leg of the neuron can be set up to point to at least 5 other memory points, each a different weight point on the authority param. The logic works out: a 40B parameter model fits in the space of a 4B model. The bench does not demonstrate this. It is stated here as the claim it is, for the work that would prove it.
+What they have now is single state. It gives you a single weight. The KT neuron holds two states, fast and slow. Even if the slow leg only offered one, that is two states remembered, which doubles the weight ability in the same space. Each leg can be set up to point to at least 5 other memory points, each a different weight point on the authority param. Add those five and the combinations multiply it further, something like 35x. A 40B parameter model in the space of a 4B model is the same idea as an example. The numbers here are examples. The logic is the point: each memory point a leg can reference adds combinations, and the combinations multiply what the same space can hold.
 
 ## 6. The bench
 
