@@ -1,4 +1,4 @@
-# The First Stateful Neuron: The Knowledge Time Neuron
+# The First Multi-State Neuron: The Knowledge Time Neuron
 
 **Author:** Darren Hall
 **Date:** November 26, 2026
@@ -342,6 +342,8 @@ Revision v1.1, November 26, 2026: section 5.8 now carries the measured scar-volu
 Revision v1.2, November 26, 2026: section 6.7 adds the auditor walk, quarantine as null, with the E2 trace. Nothing else in the paper changed.
 
 Revision v1.3, November 26, 2026: abstract now says repair once the source is named, detection untested, and authority lag by design; section 2 adds the prior-art note, Hinton and Plaut 1987 and Benna and Fusi 2016, references 7 and 8; section 10 adds gap 13, detection untested. Nothing else in the paper changed.
+
+Revision v1.4, November 26, 2026: title changed to The First Multi-State Neuron: The Knowledge Time Neuron. "Stateful" implied indefinite memory, and section 2 says that is not the case. Nothing else in the paper changed.
 
 ## References
 
