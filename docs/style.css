@@ -1,0 +1,209 @@
+/* KTN demo: dark panels, gold lettering, matching the paper figures. */
+
+:root {
+  --bg: #0a0a0a;
+  --panel: #121212;
+  --panel-2: #1a1a1a;
+  --gold: #d4af37;
+  --gold-dim: #8a7325;
+  --text: #e8e0c8;
+  --muted: #a99f7a;
+  --red: #e0655a;
+  --green: #7fb069;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+a { color: var(--gold); }
+
+h1 {
+  color: var(--gold);
+  font-size: 30px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+h2 {
+  color: var(--gold);
+  font-size: 22px;
+  margin: 40px 0 10px;
+  border-bottom: 1px solid var(--gold-dim);
+  padding-bottom: 6px;
+}
+
+h3 {
+  color: var(--gold);
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.sub { color: var(--muted); margin: 0 0 4px; }
+.author { color: var(--muted); margin: 0 0 16px; }
+.links { margin: 0 0 8px; }
+.links a { margin-right: 18px; }
+
+section p { margin: 0 0 12px; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--gold-dim);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin: 14px 0;
+}
+
+.controls { margin: 12px 0; }
+
+button {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 8px 18px;
+  margin: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--gold);
+  color: #000;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+th { color: var(--gold); font-weight: bold; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.statline {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+.statline b { color: var(--text); font-weight: bold; }
+
+.ok { color: var(--green); }
+.fail { color: var(--red); }
+
+.note { color: var(--muted); font-size: 15px; }
+
+ul.log {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  font-size: 15px;
+}
+
+ul.log li { padding: 3px 0; border-bottom: 1px solid #222; }
+ul.log li:last-child { border-bottom: none; }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 14px 0;
+}
+
+@media (max-width: 640px) {
+  .cards { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--gold-dim);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.card h3 { margin-top: 0; }
+
+.big {
+  font-size: 26px;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.big small {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.bar-row { margin: 8px 0; }
+.bar-row .lbl { font-size: 14px; color: var(--muted); }
+
+.bar {
+  height: 12px;
+  background: #222;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--gold);
+  width: 0%;
+  transition: width 0.4s;
+}
+
+.bar-fill.liar { background: var(--red); }
+
+figure {
+  margin: 24px 0;
+  background: var(--panel);
+  border: 1px solid var(--gold-dim);
+  border-radius: 6px;
+  padding: 14px;
+}
+
+figure img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 48px;
+  border-top: 1px solid var(--gold-dim);
+  padding-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
