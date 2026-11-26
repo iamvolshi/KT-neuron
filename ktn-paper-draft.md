@@ -317,7 +317,7 @@ The filed provisional, 64/182,709, covers the record machine as filed October 23
 
 [2] Hall, D. KT neuron toy. `kt_neuron.py`, October 23, 2026. Run reproduced November 26, 2026.
 
-[3] KTN bench. Phase 3 experiment results, `experiments/results.md` and `experiments/results.json`, run 2 primary, October 26, 2026. Pre-registration `experiments/preregistration.md`, amendments A1 to A7.
+[3] KTN bench. Phase 3 experiment results, `experiments/results.md` and `experiments/results.json`, run 2 primary, October 26, 2026. Pre-registration `experiments/preregistration.md`, amendments A1, A2, A3, A4, A6, and A7 (there is no A5).
 
 [4] KTN bench. Round 3 results, `experiments/results-r3-e1.md`, `experiments/results-r3-e2.md`, `experiments/results-r3-e3.md`, October 26, 2026. Pre-registration `experiments/preregistration-round3-2026-10-26.md`.
 
