@@ -80,7 +80,7 @@ The toy was built on the night of October 23, 2026, at `kt_neuron.py`, and run t
 
 ## 5. The design: a language model built from KT neurons
 
-The design record is `KT-LLM-PLAN.md`, written October 23, 2026, 163 lines. This section condenses it. The plan is a planning document, not a build order, and the full model it describes is not built.
+The design record is `KT-LLM-PLAN.md`, written October 23, 2026, 163 lines. This section condenses it. The plan is a planning document, not a build order, and the full model it describes is not built. The KTN is not an engine or a database bolted onto a model. It is the neuron itself, trained into the machine. The bench here uses a drop-in wrapper, so that claim is design, not a measured result at scale.
 
 ### 5.1 The two hard problems, named first
 
@@ -139,6 +139,10 @@ At each consolidation, a snapshot stores the full tensor state, an ordinary chec
 ### 5.8 Scale by reference
 
 What they have now is single state. It gives you a single weight. The KT neuron holds two states, fast and slow. Even if the slow leg only offered one, that is two states remembered, which doubles the weight ability in the same space. The slow trace, the record leg, can be set up to hold other memory points, each a different weight point on the authority param. Whether the fast trace can hold points has not been considered here. Five points are used because those are the five run, and they have known distinct numerical differences. More than likely there could be 10. Counting the 2 states and the 5 slow-trace points as run, that is 7 points in all. The neuron holds 2 states in each tick, so the combinations are 7 choose 2, which is 21. The same space holds 21 times the weight ability, where weight ability means the number of distinct configurations the neuron can hold. The 21 rests on the 5 points as run. With 10 points on the slow trace it would be 12 choose 2, which is 66, and that is not claimed here.
+
+The law behind the count, in the author's words: you find a number on point one; any number, when the volume is point one, can be assigned to a weight; then you create another point, and it is in that group of numbers that gets assigned to another weight. One point is a volume, a group of numbers at the granularity width, and every number in that group can go to a weight; a new point is a new group on a new weight. A further level: the volumetric number itself can be chopped up, first number to a weight, second number to a weight, third number to a weight, ad nauseam, infinite weights. That law was measured on November 26, 2026, in `experiments/measure_scar_volume.py`, preregistered in `experiments/preregistration-memory-equal-accuracy.md`, results in `experiments/results-memory-equal-accuracy.md` and `.json`.
+
+The 21 as run and the 66 with 10 points reproduce exactly as counts; 66 remains a count at 10 points, not a run result. Refining the granularity multiplies the volume. Seating every grid value through the real KRecord path gives 11 rows at granularity 0.1, 101 at 0.01, 1,001 at 0.001, and 10,001 at 0.0001, with max configurations 78, 5,253, 502,503, and 50,025,003. Each factor of 10 in granularity multiplies the configuration count by about 100 as the grid refines. The record grows near linearly, 371 to 385 bytes per row. Chopping one 0.1 volume into pieces of width c gives 0.1 divided by c weights: 100,000 per volume at c = 0.000001, and 500,000 from the 5 points as run. Chopping the volumetric number itself by digits gives 16 weights at 15 decimal places. The ceiling is the implementation, not the law: in float64 one 0.1 volume holds exactly 900,719,925,474,100 distinct values, and the 5 points at most 4,503,599,627,370,500 weights. In the reals the chop has no end.
 
 ## 6. The bench
 
@@ -285,6 +289,10 @@ The KTN language model is not built. The plan and the bench exist. The full mode
 
 Darren's own standing doubt, October 26, while the Phase 3 rounds were firing: "i hope so.. the theory is sound.. but will it live in the real world." The bench answers whether the mechanism works at all, not frontier scale.
 
+Recursive self-improvement is not devised here. What the record gives it is a way to tell improvement from drift, because every change carries what was believed, when, and why. Without that, self-improvement drifts. That ability is future work, not a result in this paper.
+
+Input quality and source verification belong to layers above the neuron. The record seals what was relied on. It does not grade the source. A bad source graded as trusted is sealed as trusted, and that grading is the layer above's job.
+
 ## 10. Open gaps, flagged, not filled
 
 1. **Prior art was never searched.** The claim in this paper is the two-point mechanism: a neuron that holds two knowledge points of state, a fast trace and a slow trace, with the handoff between them as the switch. No prior-art search was done. The firstness is the author's claim, not a verified fact, and the claim must be sized to what a search finds.
@@ -298,6 +306,7 @@ Darren's own standing doubt, October 26, while the Phase 3 rounds were firing: "
 9. **A critic's challenge, partly answered by the three-arm work.** Persistent authority reduction does change future decisions: selection held 4 of 4 in v1 and 7 of 7 in v4 through re-poisoning, while the weight trajectories moved identically, so the authority state is participating, not merely recorded. The three-arm reports conclude the KID and authority system matters more than the sigmoid modification. Still unanswered: whether ordinary techniques, adaptive bias, learned gating, confidence calibration, an external reliability tracker, could produce the same behavior more efficiently, and whether per-neuron authority keeps a stable interpretation in distributed representations. This paper records those.
 10. **The seating rule's governance weight.** Whoever grades the sources grades the model's trust. That is a justification question, not a math question, and the author owns it.
 11. **Consolidation cadence trades record richness against training speed.** The right interval is an empirical question, and it has not been answered beyond the schedules run here.
+12. **The verifier hardcodes the 0.1 grid.** `KRecord.verify()` fails any finer-grained record on the grid assertion alone, "authority off the 0.1 grid". The chain underneath is intact at every granularity measured, including 10,001 rows at granularity 0.0001: hash recomputation, prev-hash linkage, and interval contiguity all pass. A finer-grained record needs the verifier's grid check parameterized alongside the quantizer. Measured November 26, 2026, in `experiments/measure_scar_volume.py`.
 
 ## 11. Provenance and status
 
@@ -310,6 +319,8 @@ The neuron layer was built October 26, 2026, as a package, `kt_neuron`, with kid
 Posture note: this material was held dark from October 23, 2026, under the author's stealth order. This paper was written November 26, 2026, on the author's order to open the dark box, paper first, then demo, then publish, then post.
 
 The filed provisional, 64/182,709, covers the record machine as filed October 23, 2026. The KT-neuron mechanism is not in it. Any filing decision is Darren's, with counsel, later.
+
+Revision v1.1, November 26, 2026: section 5.8 now carries the measured scar-volume results, the law in the author's words, and the float64 ceiling; section 5 adds the primal-architecture touch; section 9 adds the self-improvement and verification-layer touches; section 10 adds gap 12, the verifier's hardcoded grid. Nothing else in the paper changed.
 
 ## References
 
