@@ -1,4 +1,4 @@
-# The Knowledge Time Neuron: A Neuron That Holds Two Points of State
+# The First Stateful Neuron: The Knowledge Time Neuron
 
 **Author:** Darren Hall
 **Date:** November 26, 2026
