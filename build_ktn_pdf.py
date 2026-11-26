@@ -18,6 +18,13 @@ body, n_wrapped = re.subn(
     body, flags=re.DOTALL)
 print("wrapped figures:", n_wrapped)
 
+# Set the references in smaller, tighter type so the whole block sits on one page.
+body, n_refs = re.subn(
+    r'(<h2>References</h2>.*)',
+    r'<div class="refs">\1</div>',
+    body, flags=re.DOTALL)
+print("wrapped references:", n_refs)
+
 html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,6 +67,8 @@ a {{ color: #111; }}
 img {{ max-width: 100%; height: auto; }}
 .figwrap {{ page-break-inside: avoid; margin: 10pt 0; }}
 .figwrap p {{ text-align: left; }}
+.refs {{ font-size: 10pt; line-height: 1.4; }}
+.refs p {{ margin: 0 0 5pt 0; text-align: left; }}
 </style>
 </head>
 <body>

@@ -313,14 +313,14 @@ The filed provisional, 64/182,709, covers the record machine as filed October 23
 
 ## References
 
-[1] Hall, D. KT-LLM plan: an LLM built from KT neurons. Design record, `KT-LLM-PLAN.md`, October 23, 2026. Sealed October 24, 2026. SHA-256 fefb1f8cf349dd3fb2df70475b65bcc7e58af6e7262cfa4a046bf169b801aa67.
+[1] Hall, D. KT-LLM plan: an LLM built from KT neurons. Design record, `KT-LLM-PLAN.md`, October 23, 2026. Sealed October 24, 2026.
 
 [2] Hall, D. KT neuron toy. `kt_neuron.py`, October 23, 2026. Run reproduced November 26, 2026.
 
 [3] KTN bench. Phase 3 experiment results, `experiments/results.md` and `experiments/results.json`, run 2 primary, October 26, 2026. Pre-registration `experiments/preregistration.md`, amendments A1, A2, A3, A4, A6, and A7 (there is no A5).
 
-[4] KTN bench. Round 3 results, `experiments/results-r3-e1.md`, `experiments/results-r3-e2.md`, `experiments/results-r3-e3.md`, October 26, 2026. Pre-registration `experiments/preregistration-round3-2026-10-26.md`.
+[4] KTN bench. Round 3 results, `experiments/results-r3-e1/e2/e3.md`, October 26, 2026. Pre-registration `experiments/preregistration-round3-2026-10-26.md`.
 
 [5] KTN bench. Side-by-side demo, `demo/README.md`, `demo/run_demo.py`, `demo/run_extended.py`, October 26, 2026.
 
-[6] Hall, D. Tritemporal Field Law. Zenodo record 23198458, version 1.8. The v1.8 scar landmarks used by the toy and bench. Cited for the scar shape only. The closed form lives in the v1.8 proof packet, not in the toy.
+[6] Hall, D. Tritemporal Field Law. Zenodo record 23198458, version 1.8. The v1.8 scar landmarks used by the toy and bench. Cited for the scar shape only.
