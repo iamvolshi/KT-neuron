@@ -136,7 +136,7 @@ At each consolidation, a snapshot stores the full tensor state, an ordinary chec
 
 ### 5.8 Scale by reference
 
-What they have now is single state. It gives you a single weight. The KT neuron holds two states, fast and slow. Even if the slow leg only offered one, that is two states remembered, which doubles the weight ability in the same space. Each leg can be set up to point to at least 5 other memory points, each a different weight point on the authority param. Add those five and the combinations multiply it further, something like 35x. A 40B parameter model in the space of a 4B model is the same idea as an example. The numbers here are examples. The logic is the point: each memory point a leg can reference adds combinations, and the combinations multiply what the same space can hold.
+What they have now is single state. It gives you a single weight. The KT neuron holds two states, fast and slow. Even if the slow leg only offered one, that is two states remembered, which doubles the weight ability in the same space. Each leg can be set up to point to 5 other memory points, each a different weight point on the authority param. That is 7 points in all. The neuron holds 2 states in each tick, so the combinations are 7 choose 2, which is 21. The same space holds 21 times the weight ability.
 
 ## 6. The bench
 
