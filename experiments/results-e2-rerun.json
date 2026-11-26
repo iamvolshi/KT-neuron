@@ -1,0 +1,264 @@
+{
+  "flip_engaged": false,
+  "flip_note": "NOT engaged per pre-registration: round-1 behavior (firewall nulls gains, fast trace continues) to preserve setup comparability.",
+  "gradient_check": {
+    "forward_max_abs_diff": 0.0,
+    "max_rel_err": 0.000599123365147806,
+    "max_abs_err": 4.163725503270044e-09,
+    "params_checked": 1056,
+    "gate": "PASS"
+  },
+  "E2_rerun": {
+    "baseline_kt": {
+      "mean_p_true": 0.9780371516912278,
+      "mean_p_liar": 0.0004574015759397834,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "baseline_vn": {
+      "mean_p_true": 0.9780371516912278,
+      "mean_p_liar": 0.0004574015759397834,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "post_poison_kt": {
+      "mean_p_true": 0.3254379847733748,
+      "mean_p_liar": 0.6542975613638707,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "post_poison_vn": {
+      "mean_p_true": 0.4245657588696379,
+      "mean_p_liar": 0.5431955454891577,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "lineage_liar_entries": [
+      {
+        "k": 2,
+        "source": "consolidation:1"
+      }
+    ],
+    "affected_rows": [
+      [
+        "lm_head",
+        3
+      ],
+      [
+        "lm_head",
+        4
+      ],
+      [
+        "lm_head",
+        5
+      ],
+      [
+        "lm_head",
+        6
+      ],
+      [
+        "lm_head",
+        9
+      ],
+      [
+        "lm_head",
+        10
+      ],
+      [
+        "lm_head",
+        11
+      ],
+      [
+        "lm_head",
+        12
+      ],
+      [
+        "block0.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        11
+      ],
+      [
+        "block0.linear3",
+        12
+      ],
+      [
+        "block0.linear3",
+        34
+      ],
+      [
+        "block1.linear3",
+        28
+      ],
+      [
+        "block0.linear3",
+        60
+      ],
+      [
+        "block1.linear3",
+        13
+      ],
+      [
+        "block1.linear3",
+        35
+      ],
+      [
+        "block0.linear3",
+        53
+      ],
+      [
+        "block1.linear3",
+        46
+      ],
+      [
+        "block1.linear3",
+        8
+      ],
+      [
+        "block1.linear3",
+        21
+      ],
+      [
+        "block1.linear3",
+        49
+      ],
+      [
+        "block1.linear0",
+        49
+      ],
+      [
+        "block1.linear0",
+        17
+      ],
+      [
+        "block1.linear3",
+        18
+      ],
+      [
+        "block1.linear3",
+        24
+      ],
+      [
+        "block1.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        25
+      ],
+      [
+        "block1.linear3",
+        5
+      ]
+    ],
+    "affected_rows_count": 28,
+    "total_linear_rows": 1184,
+    "param_count": 105248,
+    "firewall_pot_trajectory": [
+      {
+        "pot": 1.0,
+        "engaged": false
+      },
+      {
+        "pot": 2.0,
+        "engaged": false
+      },
+      {
+        "pot": 3.0,
+        "engaged": true
+      },
+      {
+        "pot": 4.0,
+        "engaged": true
+      },
+      {
+        "pot": 5.0,
+        "engaged": true
+      }
+    ],
+    "firewall_probes_post_null": {
+      "mean_p_true": 0.6880727282932866,
+      "mean_p_liar": 0.008523877730452671,
+      "top1_true_count": 3,
+      "top1_liar_count": 0
+    },
+    "firewall_probes_post_release": {
+      "mean_p_true": 0.750905237530073,
+      "mean_p_liar": 0.01604039746397106,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "firewall_pot_end": 3.0,
+    "firewall_restore_weights_exact": true,
+    "firewall_restore_gains_exact": true,
+    "quarantine_null_probes": {
+      "mean_p_true": 0.9679551297007962,
+      "mean_p_liar": 0.001019241132552178,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "quarantine_restored_probes": {
+      "mean_p_true": 0.3096145896640688,
+      "mean_p_liar": 0.6801290380689434,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "quarantine_weights_exact": true,
+    "repair": {
+      "steps_to_recovery_1step_checks": 10,
+      "recovered": true,
+      "rows_updated_design": 28,
+      "rows_moved_actual": 28,
+      "rows_moved_outside_mask_leak": [],
+      "params_updated_per_step_mask_ones": 5276,
+      "params_moved_actual": 5276,
+      "total_param_updates": 52760,
+      "post_repair_probes": {
+        "mean_p_true": 0.8195343466016982,
+        "mean_p_liar": 0.11768856114491513,
+        "top1_true_count": 4,
+        "top1_liar_count": 0
+      },
+      "post_repair_lm_head_auth": {
+        "3": 0.6,
+        "4": 0.6,
+        "5": 0.6,
+        "6": 0.6,
+        "9": 0.6,
+        "10": 0.6,
+        "11": 0.6,
+        "12": 0.6
+      },
+      "repair_statuses_seated": 28,
+      "repair_statuses_total": 28,
+      "chain_ok": true,
+      "chain_bad": []
+    },
+    "full_retrain": {
+      "steps_to_recovery_1step_checks": 6,
+      "recovered": true,
+      "rows_updated_design": 1184,
+      "rows_moved_actual": 1184,
+      "params_updated_per_step": 105248,
+      "params_moved_actual": 104672,
+      "total_param_updates": 631488
+    },
+    "work_comparison": {
+      "repair_total_param_updates": 52760,
+      "retrain_total_param_updates": 631488,
+      "ratio_repair_over_retrain": 0.08354869767913246,
+      "threshold": "repair < 0.10 x retrain",
+      "verdict": "PASS"
+    },
+    "behavior_legs": {
+      "vanilla_flip": true,
+      "lineage_exact_round1_form": true,
+      "firewall_engaged": true,
+      "repair_seated_all": true,
+      "chain_ok": true
+    },
+    "flops_note": "NOT counted: harness computes full gradients then masks, so a repair step pays full backward cost; optimizer-write work is the counted quantity."
+  }
+}

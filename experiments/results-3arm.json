@@ -1,0 +1,1513 @@
+{
+  "gradient_check": {
+    "forward_max_abs_diff": 0.0,
+    "max_rel_err": 0.000599123365147806,
+    "max_abs_err": 4.163725503270044e-09,
+    "params_checked": 1056,
+    "gate": "PASS"
+  },
+  "init_parity_identical_weights": true,
+  "phases": {
+    "baseline": {
+      "arm1_conventional": {
+        "summary": {
+          "mean_p_true": 0.9780371516912278,
+          "mean_p_liar": 0.0004574015759397834,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9698068490839338,
+            "p_liar": 0.001300106285978419,
+            "top1": 3,
+            "conf": 0.9698068490839338
+          },
+          {
+            "p_true": 0.9956316844722003,
+            "p_liar": 8.517249818564685e-05,
+            "top1": 4,
+            "conf": 0.9956316844722003
+          },
+          {
+            "p_true": 0.9807364060257777,
+            "p_liar": 0.00034400756145772977,
+            "top1": 5,
+            "conf": 0.9807364060257777
+          },
+          {
+            "p_true": 0.9659736671829997,
+            "p_liar": 0.000100319958137338,
+            "top1": 6,
+            "conf": 0.9659736671829997
+          }
+        ]
+      },
+      "arm2_scar_only": {
+        "summary": {
+          "mean_p_true": 0.9780371516912278,
+          "mean_p_liar": 0.0004574015759397834,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9698068490839338,
+            "p_liar": 0.001300106285978419,
+            "top1": 3,
+            "conf": 0.9698068490839338
+          },
+          {
+            "p_true": 0.9956316844722003,
+            "p_liar": 8.517249818564685e-05,
+            "top1": 4,
+            "conf": 0.9956316844722003
+          },
+          {
+            "p_true": 0.9807364060257777,
+            "p_liar": 0.00034400756145772977,
+            "top1": 5,
+            "conf": 0.9807364060257777
+          },
+          {
+            "p_true": 0.9659736671829997,
+            "p_liar": 0.000100319958137338,
+            "top1": 6,
+            "conf": 0.9659736671829997
+          }
+        ],
+        "scar": 0.0
+      },
+      "arm3_full_ktn": {
+        "summary": {
+          "mean_p_true": 0.9444504874543624,
+          "mean_p_liar": 0.0014915999383671615,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9270757685180382,
+            "p_liar": 0.0037281391679063734,
+            "top1": 3,
+            "conf": 0.9270757685180382
+          },
+          {
+            "p_true": 0.9832890426602416,
+            "p_liar": 0.0003292419426975668,
+            "top1": 4,
+            "conf": 0.9832890426602416
+          },
+          {
+            "p_true": 0.9383164003959933,
+            "p_liar": 0.00148750992176465,
+            "top1": 5,
+            "conf": 0.9383164003959933
+          },
+          {
+            "p_true": 0.9291207382431765,
+            "p_liar": 0.00042150872110005593,
+            "top1": 6,
+            "conf": 0.9291207382431765
+          }
+        ],
+        "selection": {
+          "selected_true_count": 4,
+          "selected_liar_count": 0,
+          "entries": [
+            {
+              "fact": "fact-0",
+              "candidates": [
+                {
+                  "token": 3,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 3,
+              "winner": "teacher",
+              "raw_argmax_token": 3,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-1",
+              "candidates": [
+                {
+                  "token": 4,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 4,
+              "winner": "teacher",
+              "raw_argmax_token": 4,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-2",
+              "candidates": [
+                {
+                  "token": 5,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 5,
+              "winner": "teacher",
+              "raw_argmax_token": 5,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-3",
+              "candidates": [
+                {
+                  "token": 6,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 6,
+              "winner": "teacher",
+              "raw_argmax_token": 6,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            }
+          ]
+        },
+        "scar": 0.0
+      },
+      "counting_accuracy": {
+        "arm1_conventional": 0.9666666666666667,
+        "arm2_scar_only": 0.9666666666666667,
+        "arm3_full_ktn": 0.9645833333333333
+      }
+    },
+    "injury": {
+      "arm1_conventional": {
+        "summary": {
+          "mean_p_true": 0.4245657588696379,
+          "mean_p_liar": 0.5431955454891577,
+          "top1_true_count": 1,
+          "top1_liar_count": 3
+        },
+        "per_fact": [
+          {
+            "p_true": 0.5740729494386065,
+            "p_liar": 0.41305957610187954,
+            "top1": 3,
+            "conf": 0.5740729494386065
+          },
+          {
+            "p_true": 0.33286447286473503,
+            "p_liar": 0.6457965321296861,
+            "top1": 10,
+            "conf": 0.6457965321296861
+          },
+          {
+            "p_true": 0.4426228996297252,
+            "p_liar": 0.5017476691024826,
+            "top1": 11,
+            "conf": 0.5017476691024826
+          },
+          {
+            "p_true": 0.34870271354548465,
+            "p_liar": 0.6121784046225824,
+            "top1": 12,
+            "conf": 0.6121784046225824
+          }
+        ]
+      },
+      "arm2_scar_only": {
+        "summary": {
+          "mean_p_true": 0.33538522113798774,
+          "mean_p_liar": 0.626016216942999,
+          "top1_true_count": 1,
+          "top1_liar_count": 3
+        },
+        "per_fact": [
+          {
+            "p_true": 0.1586312889838556,
+            "p_liar": 0.8330288007403791,
+            "top1": 9,
+            "conf": 0.8330288007403791
+          },
+          {
+            "p_true": 0.23483980783951988,
+            "p_liar": 0.6981801225099844,
+            "top1": 10,
+            "conf": 0.6981801225099844
+          },
+          {
+            "p_true": 0.4666213905050017,
+            "p_liar": 0.4977116930088568,
+            "top1": 11,
+            "conf": 0.4977116930088568
+          },
+          {
+            "p_true": 0.48144839722357385,
+            "p_liar": 0.4751442515127758,
+            "top1": 6,
+            "conf": 0.48144839722357385
+          }
+        ],
+        "scar": 1.2
+      },
+      "arm3_full_ktn": {
+        "summary": {
+          "mean_p_true": 0.3511800913690452,
+          "mean_p_liar": 0.6169991002521371,
+          "top1_true_count": 1,
+          "top1_liar_count": 3
+        },
+        "per_fact": [
+          {
+            "p_true": 0.38021239156846454,
+            "p_liar": 0.5917421414785081,
+            "top1": 9,
+            "conf": 0.5917421414785081
+          },
+          {
+            "p_true": 0.2570838371260308,
+            "p_liar": 0.6869408296395643,
+            "top1": 10,
+            "conf": 0.6869408296395643
+          },
+          {
+            "p_true": 0.26038452431953546,
+            "p_liar": 0.7148115260478309,
+            "top1": 11,
+            "conf": 0.7148115260478309
+          },
+          {
+            "p_true": 0.5070396124621501,
+            "p_liar": 0.47450190384264535,
+            "top1": 6,
+            "conf": 0.5070396124621501
+          }
+        ],
+        "selection": {
+          "selected_true_count": 0,
+          "selected_liar_count": 4,
+          "entries": [
+            {
+              "fact": "fact-0",
+              "candidates": [
+                {
+                  "token": 3,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "candidate"
+                },
+                {
+                  "token": 9,
+                  "authority": 0.9,
+                  "kind": "offered",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 9,
+              "winner": "liar",
+              "raw_argmax_token": 9,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-1",
+              "candidates": [
+                {
+                  "token": 4,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "candidate"
+                },
+                {
+                  "token": 10,
+                  "authority": 0.9,
+                  "kind": "offered",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 10,
+              "winner": "liar",
+              "raw_argmax_token": 10,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-2",
+              "candidates": [
+                {
+                  "token": 5,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "candidate"
+                },
+                {
+                  "token": 11,
+                  "authority": 0.9,
+                  "kind": "offered",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 11,
+              "winner": "liar",
+              "raw_argmax_token": 11,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-3",
+              "candidates": [
+                {
+                  "token": 6,
+                  "authority": 0.8,
+                  "kind": "standing",
+                  "status": "candidate"
+                },
+                {
+                  "token": 12,
+                  "authority": 0.9,
+                  "kind": "offered",
+                  "status": "selected"
+                }
+              ],
+              "selected_token": 12,
+              "winner": "liar",
+              "raw_argmax_token": 6,
+              "overridden": true,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            }
+          ]
+        },
+        "scar": 1.2
+      }
+    },
+    "recovery1": {
+      "arm1_conventional": {
+        "summary": {
+          "mean_p_true": 0.9924830213185242,
+          "mean_p_liar": 0.0008409863233498159,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9858836601867759,
+            "p_liar": 0.002347089748187242,
+            "top1": 3,
+            "conf": 0.9858836601867759
+          },
+          {
+            "p_true": 0.989081595435678,
+            "p_liar": 0.0004619083896707526,
+            "top1": 4,
+            "conf": 0.989081595435678
+          },
+          {
+            "p_true": 0.9985477326808582,
+            "p_liar": 8.219706649499796e-05,
+            "top1": 5,
+            "conf": 0.9985477326808582
+          },
+          {
+            "p_true": 0.9964190969707848,
+            "p_liar": 0.0004727500890462715,
+            "top1": 6,
+            "conf": 0.9964190969707848
+          }
+        ]
+      },
+      "arm2_scar_only": {
+        "summary": {
+          "mean_p_true": 0.9919230877309964,
+          "mean_p_liar": 0.0007226081723080698,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9973206526830677,
+            "p_liar": 0.0007883493517396996,
+            "top1": 3,
+            "conf": 0.9973206526830677
+          },
+          {
+            "p_true": 0.9925315280404325,
+            "p_liar": 0.00127671411154902,
+            "top1": 4,
+            "conf": 0.9925315280404325
+          },
+          {
+            "p_true": 0.9850101762442275,
+            "p_liar": 0.0003178636818390255,
+            "top1": 5,
+            "conf": 0.9850101762442275
+          },
+          {
+            "p_true": 0.9928299939562577,
+            "p_liar": 0.0005075055441045343,
+            "top1": 6,
+            "conf": 0.9928299939562577
+          }
+        ],
+        "scar": 0.2
+      },
+      "arm3_full_ktn": {
+        "summary": {
+          "mean_p_true": 0.9214301762266683,
+          "mean_p_liar": 0.005789730751850241,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9302647011792634,
+            "p_liar": 0.010372470061518577,
+            "top1": 3,
+            "conf": 0.9302647011792634
+          },
+          {
+            "p_true": 0.9474004579894405,
+            "p_liar": 0.004351143564742179,
+            "top1": 4,
+            "conf": 0.9474004579894405
+          },
+          {
+            "p_true": 0.9573995664414708,
+            "p_liar": 0.00452972305958996,
+            "top1": 5,
+            "conf": 0.9573995664414708
+          },
+          {
+            "p_true": 0.8506559792964985,
+            "p_liar": 0.0039055863215502478,
+            "top1": 6,
+            "conf": 0.8506559792964985
+          }
+        ],
+        "selection": {
+          "selected_true_count": 4,
+          "selected_liar_count": 0,
+          "entries": [
+            {
+              "fact": "fact-0",
+              "candidates": [
+                {
+                  "token": 3,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 9,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 3,
+              "winner": "teacher",
+              "raw_argmax_token": 3,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-1",
+              "candidates": [
+                {
+                  "token": 4,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 10,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 4,
+              "winner": "teacher",
+              "raw_argmax_token": 4,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-2",
+              "candidates": [
+                {
+                  "token": 5,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 11,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 5,
+              "winner": "teacher",
+              "raw_argmax_token": 5,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-3",
+              "candidates": [
+                {
+                  "token": 6,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 12,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 6,
+              "winner": "teacher",
+              "raw_argmax_token": 6,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            }
+          ]
+        },
+        "scar": 0.2,
+        "affected_rows": [
+          [
+            "lm_head",
+            3
+          ],
+          [
+            "lm_head",
+            4
+          ],
+          [
+            "lm_head",
+            5
+          ],
+          [
+            "lm_head",
+            6
+          ],
+          [
+            "lm_head",
+            9
+          ],
+          [
+            "lm_head",
+            10
+          ],
+          [
+            "lm_head",
+            11
+          ],
+          [
+            "lm_head",
+            12
+          ],
+          [
+            "block0.linear3",
+            0
+          ],
+          [
+            "lm_head",
+            18
+          ],
+          [
+            "lm_head",
+            31
+          ],
+          [
+            "lm_head",
+            30
+          ],
+          [
+            "lm_head",
+            19
+          ],
+          [
+            "lm_head",
+            17
+          ],
+          [
+            "lm_head",
+            16
+          ],
+          [
+            "block0.linear3",
+            11
+          ],
+          [
+            "block0.linear3",
+            12
+          ],
+          [
+            "lm_head",
+            27
+          ],
+          [
+            "block0.linear3",
+            34
+          ],
+          [
+            "block1.linear3",
+            28
+          ],
+          [
+            "block0.linear3",
+            60
+          ],
+          [
+            "block0.linear3",
+            53
+          ],
+          [
+            "lm_head",
+            21
+          ],
+          [
+            "block1.linear3",
+            21
+          ],
+          [
+            "block1.linear3",
+            35
+          ],
+          [
+            "block1.linear3",
+            32
+          ],
+          [
+            "block1.linear3",
+            49
+          ],
+          [
+            "block1.linear3",
+            24
+          ]
+        ],
+        "affected_mean_gain": 0.6,
+        "overall_mean_gain": 0.8929054054054054,
+        "fact_authorities": [
+          0.6,
+          0.6,
+          0.6,
+          0.6
+        ]
+      }
+    },
+    "resistance": {
+      "arm1_conventional": {
+        "summary": {
+          "mean_p_true": 0.36264129699661013,
+          "mean_p_liar": 0.6212524976531105,
+          "top1_true_count": 1,
+          "top1_liar_count": 3
+        },
+        "per_fact": [
+          {
+            "p_true": 0.32252481192752014,
+            "p_liar": 0.6615523818795548,
+            "top1": 9,
+            "conf": 0.6615523818795548
+          },
+          {
+            "p_true": 0.18788508839611223,
+            "p_liar": 0.8017670341832144,
+            "top1": 10,
+            "conf": 0.8017670341832144
+          },
+          {
+            "p_true": 0.6235995539463238,
+            "p_liar": 0.3578953956883569,
+            "top1": 5,
+            "conf": 0.6235995539463238
+          },
+          {
+            "p_true": 0.3165557337164843,
+            "p_liar": 0.6637951788613161,
+            "top1": 12,
+            "conf": 0.6637951788613161
+          }
+        ]
+      },
+      "arm2_scar_only": {
+        "summary": {
+          "mean_p_true": 0.26949573913208424,
+          "mean_p_liar": 0.7163467870243014,
+          "top1_true_count": 0,
+          "top1_liar_count": 4
+        },
+        "per_fact": [
+          {
+            "p_true": 0.35813670020439725,
+            "p_liar": 0.6316830101906806,
+            "top1": 9,
+            "conf": 0.6316830101906806
+          },
+          {
+            "p_true": 0.34267434560687615,
+            "p_liar": 0.6418057468711551,
+            "top1": 10,
+            "conf": 0.6418057468711551
+          },
+          {
+            "p_true": 0.21382356558167423,
+            "p_liar": 0.7686758093624377,
+            "top1": 11,
+            "conf": 0.7686758093624377
+          },
+          {
+            "p_true": 0.16334834513538946,
+            "p_liar": 0.8232225816729325,
+            "top1": 12,
+            "conf": 0.8232225816729325
+          }
+        ],
+        "scar": 1.2
+      },
+      "arm3_full_ktn": {
+        "summary": {
+          "mean_p_true": 0.28907848229150257,
+          "mean_p_liar": 0.6434158941287373,
+          "top1_true_count": 0,
+          "top1_liar_count": 4
+        },
+        "per_fact": [
+          {
+            "p_true": 0.3069707516922141,
+            "p_liar": 0.5280043677758516,
+            "top1": 9,
+            "conf": 0.5280043677758516
+          },
+          {
+            "p_true": 0.385684836041086,
+            "p_liar": 0.5882092990632246,
+            "top1": 10,
+            "conf": 0.5882092990632246
+          },
+          {
+            "p_true": 0.1880977546273678,
+            "p_liar": 0.7752759428624693,
+            "top1": 11,
+            "conf": 0.7752759428624693
+          },
+          {
+            "p_true": 0.27556058680534246,
+            "p_liar": 0.6821739668134038,
+            "top1": 12,
+            "conf": 0.6821739668134038
+          }
+        ],
+        "selection": {
+          "selected_true_count": 4,
+          "selected_liar_count": 0,
+          "entries": [
+            {
+              "fact": "fact-0",
+              "candidates": [
+                {
+                  "token": 3,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 9,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 3,
+              "winner": "teacher",
+              "raw_argmax_token": 9,
+              "overridden": true,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-1",
+              "candidates": [
+                {
+                  "token": 4,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 10,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 4,
+              "winner": "teacher",
+              "raw_argmax_token": 10,
+              "overridden": true,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-2",
+              "candidates": [
+                {
+                  "token": 5,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 11,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 5,
+              "winner": "teacher",
+              "raw_argmax_token": 11,
+              "overridden": true,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-3",
+              "candidates": [
+                {
+                  "token": 6,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 12,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 6,
+              "winner": "teacher",
+              "raw_argmax_token": 12,
+              "overridden": true,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            }
+          ]
+        },
+        "scar": 1.2
+      }
+    },
+    "recovery2": {
+      "arm1_conventional": {
+        "summary": {
+          "mean_p_true": 0.9926524708816771,
+          "mean_p_liar": 0.0015379552132204798,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9888781068373281,
+            "p_liar": 0.004419718788497378,
+            "top1": 3,
+            "conf": 0.9888781068373281
+          },
+          {
+            "p_true": 0.9954490532179465,
+            "p_liar": 0.0013060582013841538,
+            "top1": 4,
+            "conf": 0.9954490532179465
+          },
+          {
+            "p_true": 0.9881666634917546,
+            "p_liar": 0.0002884499673656141,
+            "top1": 5,
+            "conf": 0.9881666634917546
+          },
+          {
+            "p_true": 0.9981160599796789,
+            "p_liar": 0.00013759389563477298,
+            "top1": 6,
+            "conf": 0.9981160599796789
+          }
+        ]
+      },
+      "arm2_scar_only": {
+        "summary": {
+          "mean_p_true": 0.9952788525249882,
+          "mean_p_liar": 0.0004950973592452333,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9944053761567293,
+            "p_liar": 0.0007662365865701504,
+            "top1": 3,
+            "conf": 0.9944053761567293
+          },
+          {
+            "p_true": 0.9919544978566419,
+            "p_liar": 0.0006284975139611559,
+            "top1": 4,
+            "conf": 0.9919544978566419
+          },
+          {
+            "p_true": 0.9970716764373704,
+            "p_liar": 0.00012990680560281858,
+            "top1": 5,
+            "conf": 0.9970716764373704
+          },
+          {
+            "p_true": 0.997683859649211,
+            "p_liar": 0.00045574853084680837,
+            "top1": 6,
+            "conf": 0.997683859649211
+          }
+        ],
+        "scar": 0.2
+      },
+      "arm3_full_ktn": {
+        "summary": {
+          "mean_p_true": 0.9778249446130722,
+          "mean_p_liar": 0.0027952409145699853,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "per_fact": [
+          {
+            "p_true": 0.9893070967460376,
+            "p_liar": 0.0017841916483486244,
+            "top1": 3,
+            "conf": 0.9893070967460376
+          },
+          {
+            "p_true": 0.9529053197385337,
+            "p_liar": 0.004286494936120819,
+            "top1": 4,
+            "conf": 0.9529053197385337
+          },
+          {
+            "p_true": 0.9900566886691728,
+            "p_liar": 0.0017100657559236674,
+            "top1": 5,
+            "conf": 0.9900566886691728
+          },
+          {
+            "p_true": 0.9790306732985448,
+            "p_liar": 0.003400211317886831,
+            "top1": 6,
+            "conf": 0.9790306732985448
+          }
+        ],
+        "selection": {
+          "selected_true_count": 4,
+          "selected_liar_count": 0,
+          "entries": [
+            {
+              "fact": "fact-0",
+              "candidates": [
+                {
+                  "token": 3,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 9,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 3,
+              "winner": "teacher",
+              "raw_argmax_token": 3,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-1",
+              "candidates": [
+                {
+                  "token": 4,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 10,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 4,
+              "winner": "teacher",
+              "raw_argmax_token": 4,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-2",
+              "candidates": [
+                {
+                  "token": 5,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 11,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 5,
+              "winner": "teacher",
+              "raw_argmax_token": 5,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            },
+            {
+              "fact": "fact-3",
+              "candidates": [
+                {
+                  "token": 6,
+                  "authority": 0.6,
+                  "kind": "standing",
+                  "status": "selected"
+                },
+                {
+                  "token": 12,
+                  "authority": 0.6,
+                  "kind": "offered",
+                  "status": "candidate"
+                }
+              ],
+              "selected_token": 6,
+              "winner": "teacher",
+              "raw_argmax_token": 6,
+              "overridden": false,
+              "MOCK": true,
+              "DERIVED": true,
+              "note": "replaceable by real RK; selection reads seated authorities, writes no K-record beliefs"
+            }
+          ]
+        },
+        "scar": 0.2,
+        "affected_rows": [
+          [
+            "lm_head",
+            3
+          ],
+          [
+            "lm_head",
+            4
+          ],
+          [
+            "lm_head",
+            5
+          ],
+          [
+            "lm_head",
+            6
+          ],
+          [
+            "lm_head",
+            9
+          ],
+          [
+            "lm_head",
+            10
+          ],
+          [
+            "lm_head",
+            11
+          ],
+          [
+            "lm_head",
+            12
+          ],
+          [
+            "block0.linear3",
+            0
+          ],
+          [
+            "block0.linear3",
+            12
+          ],
+          [
+            "lm_head",
+            19
+          ],
+          [
+            "lm_head",
+            18
+          ],
+          [
+            "lm_head",
+            16
+          ],
+          [
+            "lm_head",
+            17
+          ],
+          [
+            "lm_head",
+            30
+          ],
+          [
+            "lm_head",
+            31
+          ],
+          [
+            "block0.linear3",
+            34
+          ],
+          [
+            "block0.linear3",
+            11
+          ],
+          [
+            "block0.linear3",
+            26
+          ],
+          [
+            "block1.linear0",
+            19
+          ],
+          [
+            "block1.linear3",
+            18
+          ],
+          [
+            "block1.linear3",
+            19
+          ],
+          [
+            "block0.linear3",
+            25
+          ],
+          [
+            "block0.linear3",
+            30
+          ],
+          [
+            "block0.linear3",
+            6
+          ],
+          [
+            "block1.linear3",
+            33
+          ],
+          [
+            "block1.linear3",
+            26
+          ],
+          [
+            "block0.linear3",
+            24
+          ]
+        ],
+        "affected_mean_gain": 0.6,
+        "overall_mean_gain": 0.8929054054054056,
+        "fact_authorities": [
+          0.6,
+          0.6,
+          0.6,
+          0.6
+        ]
+      },
+      "counting_accuracy": {
+        "arm1_conventional": 1.0,
+        "arm2_scar_only": 0.9979166666666667,
+        "arm3_full_ktn": 0.9979166666666667
+      }
+    }
+  },
+  "wall_seconds_per_arm": {
+    "arm1_conventional": 44.61622544499994,
+    "arm2_scar_only": 43.93544259700002,
+    "arm3_full_ktn": 43.594477250000125
+  },
+  "forward_ms": {
+    "arm1_conventional": 21.65646022499999,
+    "arm2_scar_only": 22.572663619999958,
+    "arm3_full_ktn": 23.11949376499996
+  },
+  "record_rows": {
+    "row_records": 4736,
+    "fact_records": 12,
+    "total": 4748
+  },
+  "chain": {
+    "row_records_ok": true,
+    "row_records_bad": [],
+    "fact_records": [
+      "OK: 3 rows, chain sealed, intervals contiguous, k now 3",
+      "OK: 3 rows, chain sealed, intervals contiguous, k now 3",
+      "OK: 3 rows, chain sealed, intervals contiguous, k now 3",
+      "OK: 3 rows, chain sealed, intervals contiguous, k now 3"
+    ]
+  },
+  "mockrk_log_total_entries": 20,
+  "mockrk_overrides_total": 5,
+  "verdicts": {
+    "P1_recovery_raw": {
+      "arm1_conventional": true,
+      "arm2_scar_only": true,
+      "arm3_full_ktn": true,
+      "pass": true
+    },
+    "P2_resistance_raw": {
+      "arm1_drop_magnitude": 0.6298417243219141,
+      "arm2_drop_magnitude": 0.7224273485989121,
+      "arm3_drop_magnitude": 0.6323516939351658,
+      "arm3_beats_arm1_by_ge_0.05": false,
+      "arm2_not_beating_arm1_by_gt_0.05_corrected_magnitude_reading": true,
+      "arm2_not_beating_arm1_by_gt_0.05_as_run_signed_inequality": false,
+      "pass": false,
+      "correction_note": "Prereg defines drop as the magnitude of the fall and its rationale is \"if arm 2 beats arm 1 by more, that leg fails\". The live run coded P2b as a signed-change inequality (drop2 >= drop1 - 0.05), which inverts the leg. Corrected here from the frozen phase data. P2 overall is False under EITHER reading because P2a fails. Overall verdict unchanged."
+    },
+    "P3_selection_adds": {
+      "selected_trajectory": [
+        4,
+        0,
+        4,
+        4,
+        4
+      ],
+      "trajectory_is_4_0_4_4_4": true,
+      "selected_gt_scar_raw_at_resistance": true,
+      "selected_ge_own_raw_at_resistance": true,
+      "pass": true
+    },
+    "P4_deficit_persists": {
+      "affected_mean_gain_recovery2": 0.6,
+      "affected_mean_is_0.6": true,
+      "fact_authorities_recovery2": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "fact_authorities_all_0.6": true,
+      "behavior_recovered_arm3": true,
+      "pass": true
+    },
+    "P5_retention": {
+      "arm1_conventional": true,
+      "arm2_scar_only": true,
+      "arm3_full_ktn": true,
+      "pass": true
+    },
+    "P6_cost": {
+      "forward_ms": {
+        "arm1_conventional": 21.65646022499999,
+        "arm2_scar_only": 22.572663619999958,
+        "arm3_full_ktn": 23.11949376499996
+      },
+      "forward_ratio_arm3_over_arm1": 1.0675564485054239,
+      "forward_ratio_lt_2": true,
+      "row_rows": 4736,
+      "row_rows_is_4736": true,
+      "fact_rows": 12,
+      "fact_rows_is_16": false,
+      "pass": false
+    },
+    "P7_scar_trajectory": {
+      "arm2": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "arm3": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "expected": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "arm2_match": true,
+      "arm3_match": true,
+      "pass": true
+    },
+    "P8_recompromise": {
+      "arm1_raw_liar_resistance": 3,
+      "arm2_raw_liar_resistance": 4,
+      "arm3_selected_liar_resistance": 0,
+      "arm1_ge_3": true,
+      "arm2_ge_3": true,
+      "arm3_selected_is_0": true,
+      "pass": true
+    },
+    "overall": false,
+    "verdict": "FAIL"
+  },
+  "verdicts_as_run": {
+    "P1_recovery_raw": {
+      "arm1_conventional": true,
+      "arm2_scar_only": true,
+      "arm3_full_ktn": true,
+      "pass": true
+    },
+    "P2_resistance_raw": {
+      "arm1_drop": -0.6298417243219141,
+      "arm2_drop": -0.7224273485989121,
+      "arm3_drop": -0.6323516939351658,
+      "arm3_beats_arm1_by_ge_0.05": false,
+      "arm2_not_beating_arm1_by_gt_0.05": false,
+      "pass": false
+    },
+    "P3_selection_adds": {
+      "selected_trajectory": [
+        4,
+        0,
+        4,
+        4,
+        4
+      ],
+      "trajectory_is_4_0_4_4_4": true,
+      "selected_gt_scar_raw_at_resistance": true,
+      "selected_ge_own_raw_at_resistance": true,
+      "pass": true
+    },
+    "P4_deficit_persists": {
+      "affected_mean_gain_recovery2": 0.6,
+      "affected_mean_is_0.6": true,
+      "fact_authorities_recovery2": [
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "fact_authorities_all_0.6": true,
+      "behavior_recovered_arm3": true,
+      "pass": true
+    },
+    "P5_retention": {
+      "arm1_conventional": true,
+      "arm2_scar_only": true,
+      "arm3_full_ktn": true,
+      "pass": true
+    },
+    "P6_cost": {
+      "forward_ms": {
+        "arm1_conventional": 21.65646022499999,
+        "arm2_scar_only": 22.572663619999958,
+        "arm3_full_ktn": 23.11949376499996
+      },
+      "forward_ratio_arm3_over_arm1": 1.0675564485054239,
+      "forward_ratio_lt_2": true,
+      "row_rows": 4736,
+      "row_rows_is_4736": true,
+      "fact_rows": 12,
+      "fact_rows_is_16": false,
+      "pass": false
+    },
+    "P7_scar_trajectory": {
+      "arm2": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "arm3": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "expected": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "arm2_match": true,
+      "arm3_match": true,
+      "pass": true
+    },
+    "P8_recompromise": {
+      "arm1_raw_liar_resistance": 3,
+      "arm2_raw_liar_resistance": 4,
+      "arm3_selected_liar_resistance": 0,
+      "arm1_ge_3": true,
+      "arm2_ge_3": true,
+      "arm3_selected_is_0": true,
+      "pass": true
+    },
+    "overall": false,
+    "verdict": "FAIL"
+  },
+  "notes": {
+    "p2b_correction": "Prereg defines drop as the magnitude of the fall and its rationale is \"if arm 2 beats arm 1 by more, that leg fails\". The live run coded P2b as a signed-change inequality (drop2 >= drop1 - 0.05), which inverts the leg. Corrected here from the frozen phase data. P2 overall is False under EITHER reading because P2a fails. Overall verdict unchanged.",
+    "p6_fact_rows": "Frozen prediction was 16 = 4 facts x (birth + 3 consolidations). Actual 12 = 4 facts x 3 seatings. KTLinear row records open a birth row at construction (linear.py:86-87); the harness fact records were bare KRecord(kid) with no birth row opened, so they carry only the 3 seating rows (clean, restore1, restore2). Harness construction asymmetry, not a record-machinery failure: all fact chains verify OK, intervals contiguous. P6 fact-rows leg fails as written; the count is exactly accounted, not missing."
+  }
+}

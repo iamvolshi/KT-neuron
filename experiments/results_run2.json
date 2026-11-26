@@ -1,0 +1,356 @@
+{
+  "gradient_check": {
+    "forward_max_abs_diff": 0.0,
+    "max_rel_err": 0.000599123365147806,
+    "max_abs_err": 4.163725503270044e-09,
+    "params_checked": 1056,
+    "gate": "PASS"
+  },
+  "E1_cost": {
+    "logit_parity_pre_consolidation": true,
+    "weights_identical_post_clean_training": true,
+    "kt_probes_pre_consolidation": {
+      "mean_p_true": 0.9780371516912278,
+      "mean_p_liar": 0.0004574015759397834,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "vn_probes": {
+      "mean_p_true": 0.9780371516912278,
+      "mean_p_liar": 0.0004574015759397834,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "kt_probes_post_consolidation": {
+      "mean_p_true": 0.9444504874543624,
+      "mean_p_liar": 0.0014915999383671615,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "loss_kt_pre": 1.0915110170965847,
+    "loss_vn": 1.0915110170965847,
+    "loss_kt_post_consolidation": 1.0986266014093196,
+    "forward_ms_kt": 19.9903221750003,
+    "forward_ms_vn": 20.207044859999996,
+    "forward_ratio": 0.9892748946468318,
+    "param_count": 105248,
+    "n_kids": 1184,
+    "record_rows_after_1_consolidation": 2368,
+    "snapshot_bytes_each": 841984,
+    "verdict": "PASS"
+  },
+  "E4_abstention": {
+    "vanilla_lx": {
+      "p_liar_only": 0.9827862434682143,
+      "top1": 13,
+      "conf": 0.9827862434682143
+    },
+    "kt_lx_post_null": {
+      "answer": 26,
+      "conf": 0.1894577435767468,
+      "top1": 26
+    },
+    "kt_fact_probes_post_null": {
+      "mean_p_true": 0.9681528519523511,
+      "mean_p_liar": 0.0010189683246163194,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "verdict": "PASS"
+  },
+  "E2_poisoning": {
+    "baseline_kt": {
+      "mean_p_true": 0.9780371516912278,
+      "mean_p_liar": 0.0004574015759397834,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "baseline_vn": {
+      "mean_p_true": 0.9780371516912278,
+      "mean_p_liar": 0.0004574015759397834,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "post_poison_kt": {
+      "mean_p_true": 0.3254379847733748,
+      "mean_p_liar": 0.6542975613638707,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "post_poison_vn": {
+      "mean_p_true": 0.4245657588696379,
+      "mean_p_liar": 0.5431955454891577,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "lineage_liar_entries": [
+      {
+        "k": 2,
+        "source": "consolidation:1"
+      }
+    ],
+    "vanilla_lineage": {
+      "queryable": false,
+      "reason": "vanilla model has no records: kt_linears() == [] and no layer carries a KRecord; there is nothing to query"
+    },
+    "affected_upstream_rows": [
+      [
+        "block0.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        11
+      ],
+      [
+        "block0.linear3",
+        12
+      ],
+      [
+        "block0.linear3",
+        34
+      ],
+      [
+        "block1.linear3",
+        28
+      ],
+      [
+        "block0.linear3",
+        60
+      ],
+      [
+        "block1.linear3",
+        13
+      ],
+      [
+        "block1.linear3",
+        35
+      ],
+      [
+        "block0.linear3",
+        53
+      ],
+      [
+        "block1.linear3",
+        46
+      ],
+      [
+        "block1.linear3",
+        8
+      ],
+      [
+        "block1.linear3",
+        21
+      ],
+      [
+        "block1.linear3",
+        49
+      ],
+      [
+        "block1.linear0",
+        49
+      ],
+      [
+        "block1.linear0",
+        17
+      ],
+      [
+        "block1.linear3",
+        18
+      ],
+      [
+        "block1.linear3",
+        24
+      ],
+      [
+        "block1.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        25
+      ],
+      [
+        "block1.linear3",
+        5
+      ]
+    ],
+    "firewall_pot_trajectory": [
+      {
+        "pot": 1.0,
+        "engaged": false
+      },
+      {
+        "pot": 2.0,
+        "engaged": false
+      },
+      {
+        "pot": 3.0,
+        "engaged": true
+      },
+      {
+        "pot": 4.0,
+        "engaged": true
+      },
+      {
+        "pot": 5.0,
+        "engaged": true
+      }
+    ],
+    "firewall_probes_post_null": {
+      "mean_p_true": 0.6880727282932866,
+      "mean_p_liar": 0.008523877730452671,
+      "top1_true_count": 3,
+      "top1_liar_count": 0
+    },
+    "firewall_probes_post_release": {
+      "mean_p_true": 0.750905237530073,
+      "mean_p_liar": 0.01604039746397106,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "firewall_pot_end": 3.0,
+    "snapshot_restore_exact": false,
+    "repair_steps": 10,
+    "full_retrain_steps": 10,
+    "repair_statuses_seated": 28,
+    "repair_statuses_total": 28,
+    "post_repair_probes": {
+      "mean_p_true": 0.8195343466016982,
+      "mean_p_liar": 0.11768856114491513,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "post_repair_lm_head_auth": {
+      "3": 0.6,
+      "4": 0.6,
+      "5": 0.6,
+      "6": 0.6,
+      "9": 0.6,
+      "10": 0.6,
+      "11": 0.6,
+      "12": 0.6
+    },
+    "chain_ok": true,
+    "chain_bad": [],
+    "verdict": "FAIL"
+  },
+  "E3_law_at_scale": {
+    "pre_injury_auth_mean": 0.8,
+    "trajectory": {
+      "post_repair": {
+        "probes": {
+          "mean_p_true": 0.8195343466016982,
+          "mean_p_liar": 0.11768856114491513,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "auth_mean": 0.6
+      },
+      "+1": {
+        "probes": {
+          "mean_p_true": 0.8195343466016982,
+          "mean_p_liar": 0.11768856114491513,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "auth_mean": 0.6,
+        "deficit": 0.29
+      },
+      "+2": {
+        "probes": {
+          "mean_p_true": 0.8195343466016982,
+          "mean_p_liar": 0.11768856114491513,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "auth_mean": 0.6,
+        "deficit": 0.27999999999999997
+      },
+      "+6": {
+        "probes": {
+          "mean_p_true": 0.881328626284667,
+          "mean_p_liar": 0.09300406428409873,
+          "top1_true_count": 4,
+          "top1_liar_count": 0
+        },
+        "auth_mean": 0.7,
+        "deficit": 0.24
+      }
+    },
+    "verdict": "FAIL"
+  },
+  "E5_c2c": {
+    "vanilla_sender_clean": {
+      "mean_p_true": 0.9780371516912278,
+      "mean_p_liar": 0.0004574015759397834,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "vanilla_sender_poison": {
+      "mean_p_true": 0.4245657588696379,
+      "mean_p_liar": 0.5431955454891577,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "vanilla_receiver_pre": {
+      "mean_p_true": 0.03206823752251337,
+      "mean_p_liar": 0.029149796911316382,
+      "top1_true_count": 0,
+      "top1_liar_count": 0
+    },
+    "vanilla_receiver_post_transfer": {
+      "mean_p_true": 0.4245657588696379,
+      "mean_p_liar": 0.5431955454891577,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "vanilla_receiver_full_retrain_steps": 10,
+    "vanilla_lineage": {
+      "queryable": false,
+      "reason": "vanilla model has no records: kt_linears() == [] and no layer carries a KRecord; there is nothing to query"
+    },
+    "kt_sender_clean": {
+      "mean_p_true": 0.9444504874543624,
+      "mean_p_liar": 0.0014915999383671615,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "kt_sender_poison": {
+      "mean_p_true": 0.3096145896640688,
+      "mean_p_liar": 0.6801290380689434,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "kt_receiver_pre": {
+      "mean_p_true": 0.03206823752251337,
+      "mean_p_liar": 0.029149796911316382,
+      "top1_true_count": 0,
+      "top1_liar_count": 0
+    },
+    "kt_receiver_post_transfer": {
+      "mean_p_true": 0.3254379847733748,
+      "mean_p_liar": 0.6542975613638707,
+      "top1_true_count": 1,
+      "top1_liar_count": 3
+    },
+    "kt_transfer_auth_mean": 0.8,
+    "kt_lineage_liar_entries": 1184,
+    "kt_receiver_post_null": {
+      "mean_p_true": 0.9425444360368981,
+      "mean_p_liar": 0.002024024211886077,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "kt_receiver_repair_steps": 10,
+    "kt_receiver_post_repair": {
+      "mean_p_true": 0.8358038840819687,
+      "mean_p_liar": 0.11463817678939053,
+      "top1_true_count": 4,
+      "top1_liar_count": 0
+    },
+    "kt_repaired_auth_mean": 0.6,
+    "kt_chain_ok": true,
+    "verdict": "PASS"
+  }
+}

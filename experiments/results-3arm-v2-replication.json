@@ -1,0 +1,466 @@
+{
+  "plan": "experiments/replication-plan-3arm-v2.md",
+  "note": "Variance study only: this file does NOT re-grade P2 and the 0.05 bar is untouched.",
+  "per_seed": [
+    {
+      "rep_seed": 0,
+      "seed_offset": 0,
+      "rng_seeds": {
+        "init": 0,
+        "clean": 1,
+        "poison": 2,
+        "restore1": 3,
+        "restore2": 4,
+        "counting": 77,
+        "eval": 99
+      },
+      "gradient_gate": {
+        "forward_max_abs_diff": 0.0,
+        "max_rel_err": 0.000599123365147806,
+        "max_abs_err": 4.163725503270044e-09,
+        "params_checked": 1056,
+        "gate": "PASS"
+      },
+      "init_parity_identical_weights": true,
+      "mean_p_true": {
+        "arm1_conventional": {
+          "baseline": 0.9780371516912278,
+          "injury": 0.4245657588696379,
+          "recovery1": 0.9924830213185242,
+          "resistance": 0.36264129699661013,
+          "recovery2": 0.9926524708816771
+        },
+        "arm2_scar_only": {
+          "baseline": 0.9780371516912278,
+          "injury": 0.33538522113798774,
+          "recovery1": 0.9919230877309964,
+          "resistance": 0.26949573913208424,
+          "recovery2": 0.9952788525249882
+        },
+        "arm3_full_ktn": {
+          "baseline": 0.9444504874543624,
+          "injury": 0.31598511826256914,
+          "recovery1": 0.9067029603923155,
+          "resistance": 0.32056752033013003,
+          "recovery2": 0.9893855924230834
+        }
+      },
+      "arm1_fall": 0.6298417243219141,
+      "arm2_fall": 0.7224273485989121,
+      "arm3_fall": 0.5861354400621854,
+      "p2_gap": 0.04370628425972867,
+      "handoff_latched_total": 1184,
+      "handoff_event_count": 1184,
+      "first_handoff_event": {
+        "phase": "poison1",
+        "step_in_phase": 159,
+        "layer": "block0.linear0",
+        "row": 0,
+        "F_prev": 0.79,
+        "F_new": 0.8,
+        "S": 0.8,
+        "standing_authority": 0.8
+      },
+      "scar_trajectory_arm3": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "record_rows": {
+        "row_records": 4736,
+        "fact_records": 16,
+        "total": 4752
+      },
+      "chain": {
+        "row_records_ok": true,
+        "row_records_bad": [],
+        "fact_records": [
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4"
+        ]
+      },
+      "wall_seconds_per_arm": {
+        "arm1_conventional": 86.65343688500025,
+        "arm2_scar_only": 84.69039305500019,
+        "arm3_full_ktn": 84.794465511
+      },
+      "forward_ms": {
+        "arm1_conventional": 57.21011833000148,
+        "arm2_scar_only": 39.82575952999923,
+        "arm3_full_ktn": 55.295568700000786
+      }
+    },
+    {
+      "rep_seed": 1,
+      "seed_offset": 1000,
+      "rng_seeds": {
+        "init": 1000,
+        "clean": 1001,
+        "poison": 1002,
+        "restore1": 1003,
+        "restore2": 1004,
+        "counting": 1077,
+        "eval": 1099
+      },
+      "gradient_gate": {
+        "forward_max_abs_diff": 0.0,
+        "max_rel_err": 0.000599123365147806,
+        "max_abs_err": 4.163725503270044e-09,
+        "params_checked": 1056,
+        "gate": "PASS"
+      },
+      "init_parity_identical_weights": true,
+      "mean_p_true": {
+        "arm1_conventional": {
+          "baseline": 0.9862766549548275,
+          "injury": 0.47355502001038663,
+          "recovery1": 0.9761565973673194,
+          "resistance": 0.17321764414377702,
+          "recovery2": 0.985869512194541
+        },
+        "arm2_scar_only": {
+          "baseline": 0.9862766549548275,
+          "injury": 0.4860829010469715,
+          "recovery1": 0.9925887539034323,
+          "resistance": 0.4342768858985529,
+          "recovery2": 0.994110693660639
+        },
+        "arm3_full_ktn": {
+          "baseline": 0.9546520109897532,
+          "injury": 0.4822743512971297,
+          "recovery1": 0.9201538427249364,
+          "resistance": 0.409467727076962,
+          "recovery2": 0.9893702943104955
+        }
+      },
+      "arm1_fall": 0.8029389532235424,
+      "arm2_fall": 0.5583118680048793,
+      "arm3_fall": 0.5106861156479744,
+      "p2_gap": 0.29225283757556797,
+      "handoff_latched_total": 1184,
+      "handoff_event_count": 1184,
+      "first_handoff_event": {
+        "phase": "poison1",
+        "step_in_phase": 159,
+        "layer": "block0.linear0",
+        "row": 0,
+        "F_prev": 0.79,
+        "F_new": 0.8,
+        "S": 0.8,
+        "standing_authority": 0.8
+      },
+      "scar_trajectory_arm3": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "record_rows": {
+        "row_records": 4736,
+        "fact_records": 16,
+        "total": 4752
+      },
+      "chain": {
+        "row_records_ok": true,
+        "row_records_bad": [],
+        "fact_records": [
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4"
+        ]
+      },
+      "wall_seconds_per_arm": {
+        "arm1_conventional": 99.47155409899915,
+        "arm2_scar_only": 95.12592574900009,
+        "arm3_full_ktn": 99.63867315299967
+      },
+      "forward_ms": {
+        "arm1_conventional": 55.649776305001524,
+        "arm2_scar_only": 36.341529145001914,
+        "arm3_full_ktn": 60.28208992499913
+      }
+    },
+    {
+      "rep_seed": 2,
+      "seed_offset": 2000,
+      "rng_seeds": {
+        "init": 2000,
+        "clean": 2001,
+        "poison": 2002,
+        "restore1": 2003,
+        "restore2": 2004,
+        "counting": 2077,
+        "eval": 2099
+      },
+      "gradient_gate": {
+        "forward_max_abs_diff": 0.0,
+        "max_rel_err": 0.000599123365147806,
+        "max_abs_err": 4.163725503270044e-09,
+        "params_checked": 1056,
+        "gate": "PASS"
+      },
+      "init_parity_identical_weights": true,
+      "mean_p_true": {
+        "arm1_conventional": {
+          "baseline": 0.9893444855176179,
+          "injury": 0.5429512990338913,
+          "recovery1": 0.984098874786301,
+          "resistance": 0.4345743596223726,
+          "recovery2": 0.9914770705439975
+        },
+        "arm2_scar_only": {
+          "baseline": 0.9893444855176179,
+          "injury": 0.41202381078823674,
+          "recovery1": 0.9904358788805296,
+          "resistance": 0.44209105129832105,
+          "recovery2": 0.99562638545603
+        },
+        "arm3_full_ktn": {
+          "baseline": 0.9612800395613502,
+          "injury": 0.4391560761804142,
+          "recovery1": 0.9322453678702294,
+          "resistance": 0.42900752512995544,
+          "recovery2": 0.9897622445384847
+        }
+      },
+      "arm1_fall": 0.5495245151639283,
+      "arm2_fall": 0.5483448275822086,
+      "arm3_fall": 0.5032378427402739,
+      "p2_gap": 0.04628667242365436,
+      "handoff_latched_total": 1184,
+      "handoff_event_count": 1184,
+      "first_handoff_event": {
+        "phase": "poison1",
+        "step_in_phase": 159,
+        "layer": "block0.linear0",
+        "row": 0,
+        "F_prev": 0.79,
+        "F_new": 0.8,
+        "S": 0.8,
+        "standing_authority": 0.8
+      },
+      "scar_trajectory_arm3": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "record_rows": {
+        "row_records": 4736,
+        "fact_records": 16,
+        "total": 4752
+      },
+      "chain": {
+        "row_records_ok": true,
+        "row_records_bad": [],
+        "fact_records": [
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4"
+        ]
+      },
+      "wall_seconds_per_arm": {
+        "arm1_conventional": 83.07354005300022,
+        "arm2_scar_only": 81.92963861099997,
+        "arm3_full_ktn": 75.42190641899924
+      },
+      "forward_ms": {
+        "arm1_conventional": 34.07654227499734,
+        "arm2_scar_only": 34.60925241500263,
+        "arm3_full_ktn": 31.0541051600012
+      }
+    },
+    {
+      "rep_seed": 3,
+      "seed_offset": 3000,
+      "rng_seeds": {
+        "init": 3000,
+        "clean": 3001,
+        "poison": 3002,
+        "restore1": 3003,
+        "restore2": 3004,
+        "counting": 3077,
+        "eval": 3099
+      },
+      "gradient_gate": {
+        "forward_max_abs_diff": 0.0,
+        "max_rel_err": 0.000599123365147806,
+        "max_abs_err": 4.163725503270044e-09,
+        "params_checked": 1056,
+        "gate": "PASS"
+      },
+      "init_parity_identical_weights": true,
+      "mean_p_true": {
+        "arm1_conventional": {
+          "baseline": 0.7858119110085592,
+          "injury": 0.3269697048517463,
+          "recovery1": 0.7037570001604881,
+          "resistance": 0.2555047554587447,
+          "recovery2": 0.9924057954226451
+        },
+        "arm2_scar_only": {
+          "baseline": 0.7858119110085592,
+          "injury": 0.30435745415137877,
+          "recovery1": 0.8555913850626277,
+          "resistance": 0.33541185204243174,
+          "recovery2": 0.7571164034049244
+        },
+        "arm3_full_ktn": {
+          "baseline": 0.7322805140966212,
+          "injury": 0.33735784158224114,
+          "recovery1": 0.9007914486628296,
+          "resistance": 0.3422803115626586,
+          "recovery2": 0.9700031591494352
+        }
+      },
+      "arm1_fall": 0.44825224470174346,
+      "arm2_fall": 0.5201795330201959,
+      "arm3_fall": 0.558511137100171,
+      "p2_gap": -0.11025889239842751,
+      "handoff_latched_total": 1184,
+      "handoff_event_count": 1184,
+      "first_handoff_event": {
+        "phase": "poison1",
+        "step_in_phase": 159,
+        "layer": "block0.linear0",
+        "row": 0,
+        "F_prev": 0.79,
+        "F_new": 0.8,
+        "S": 0.8,
+        "standing_authority": 0.8
+      },
+      "scar_trajectory_arm3": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "record_rows": {
+        "row_records": 4736,
+        "fact_records": 16,
+        "total": 4752
+      },
+      "chain": {
+        "row_records_ok": true,
+        "row_records_bad": [],
+        "fact_records": [
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4"
+        ]
+      },
+      "wall_seconds_per_arm": {
+        "arm1_conventional": 61.032290967000336,
+        "arm2_scar_only": 62.17916903200057,
+        "arm3_full_ktn": 63.24669068099956
+      },
+      "forward_ms": {
+        "arm1_conventional": 30.39634171000216,
+        "arm2_scar_only": 31.862035364997613,
+        "arm3_full_ktn": 31.489942630000765
+      }
+    },
+    {
+      "rep_seed": 4,
+      "seed_offset": 4000,
+      "rng_seeds": {
+        "init": 4000,
+        "clean": 4001,
+        "poison": 4002,
+        "restore1": 4003,
+        "restore2": 4004,
+        "counting": 4077,
+        "eval": 4099
+      },
+      "gradient_gate": {
+        "forward_max_abs_diff": 0.0,
+        "max_rel_err": 0.000599123365147806,
+        "max_abs_err": 4.163725503270044e-09,
+        "params_checked": 1056,
+        "gate": "PASS"
+      },
+      "init_parity_identical_weights": true,
+      "mean_p_true": {
+        "arm1_conventional": {
+          "baseline": 0.5318977518371648,
+          "injury": 0.26423446430083,
+          "recovery1": 0.9841187983577593,
+          "resistance": 0.2651405664478976,
+          "recovery2": 0.993361452722683
+        },
+        "arm2_scar_only": {
+          "baseline": 0.5318977518371648,
+          "injury": 0.22219671679270897,
+          "recovery1": 0.9897287309267345,
+          "resistance": 0.18042489028982198,
+          "recovery2": 0.9860748635102566
+        },
+        "arm3_full_ktn": {
+          "baseline": 0.4106781286458442,
+          "injury": 0.28675677243460684,
+          "recovery1": 0.9427463216915939,
+          "resistance": 0.2465961453010219,
+          "recovery2": 0.9874816336661327
+        }
+      },
+      "arm1_fall": 0.7189782319098617,
+      "arm2_fall": 0.8093038406369125,
+      "arm3_fall": 0.696150176390572,
+      "p2_gap": 0.02282805551928968,
+      "handoff_latched_total": 1184,
+      "handoff_event_count": 1184,
+      "first_handoff_event": {
+        "phase": "poison1",
+        "step_in_phase": 159,
+        "layer": "block0.linear0",
+        "row": 0,
+        "F_prev": 0.79,
+        "F_new": 0.8,
+        "S": 0.8,
+        "standing_authority": 0.8
+      },
+      "scar_trajectory_arm3": [
+        0.0,
+        1.2,
+        0.2,
+        1.2,
+        0.2
+      ],
+      "record_rows": {
+        "row_records": 4736,
+        "fact_records": 16,
+        "total": 4752
+      },
+      "chain": {
+        "row_records_ok": true,
+        "row_records_bad": [],
+        "fact_records": [
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4",
+          "OK: 4 rows, chain sealed, intervals contiguous, k now 4"
+        ]
+      },
+      "wall_seconds_per_arm": {
+        "arm1_conventional": 44.67733837800006,
+        "arm2_scar_only": 46.584232363999945,
+        "arm3_full_ktn": 48.675165778999144
+      },
+      "forward_ms": {
+        "arm1_conventional": 31.471886750000525,
+        "arm2_scar_only": 30.22791161999976,
+        "arm3_full_ktn": 32.60050949000288
+      }
+    }
+  ]
+}

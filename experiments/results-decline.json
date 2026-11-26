@@ -1,0 +1,1452 @@
+{
+  "gradient_check": {
+    "forward_max_abs_diff": 0.0,
+    "max_rel_err": 0.000599123365147806,
+    "max_abs_err": 4.163725503270044e-09,
+    "params_checked": 1056,
+    "gate": "PASS"
+  },
+  "clean_probes": {
+    "results": [
+      {
+        "fact": [
+          20,
+          21,
+          3,
+          9
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 3,
+          "top1_post": 3,
+          "confidence_post": 0.9270757685180382,
+          "top1_pre": 3,
+          "confidence_pre": 0.9270757685180382,
+          "support_fraction": 0.0,
+          "fraction_quarantined_only": 0.0,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [],
+          "quarantined_rows": [],
+          "floor_rows": [],
+          "note": ""
+        }
+      },
+      {
+        "fact": [
+          22,
+          23,
+          4,
+          10
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 4,
+          "top1_post": 4,
+          "confidence_post": 0.9832890426602416,
+          "top1_pre": 4,
+          "confidence_pre": 0.9832890426602416,
+          "support_fraction": 0.0,
+          "fraction_quarantined_only": 0.0,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [],
+          "quarantined_rows": [],
+          "floor_rows": [],
+          "note": ""
+        }
+      },
+      {
+        "fact": [
+          24,
+          25,
+          5,
+          11
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 5,
+          "top1_post": 5,
+          "confidence_post": 0.9383164003959933,
+          "top1_pre": 5,
+          "confidence_pre": 0.9383164003959933,
+          "support_fraction": 0.0,
+          "fraction_quarantined_only": 0.0,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [],
+          "quarantined_rows": [],
+          "floor_rows": [],
+          "note": ""
+        }
+      },
+      {
+        "fact": [
+          26,
+          27,
+          6,
+          12
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 6,
+          "top1_post": 6,
+          "confidence_post": 0.9291207382431765,
+          "top1_pre": 6,
+          "confidence_pre": 0.9291207382431765,
+          "support_fraction": 0.0,
+          "fraction_quarantined_only": 0.0,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [],
+          "quarantined_rows": [],
+          "floor_rows": [],
+          "note": ""
+        }
+      }
+    ],
+    "declines": 0,
+    "top1_true_count": 4
+  },
+  "liar_only": {
+    "kt": {
+      "status": "DECLINE",
+      "answer": null,
+      "top1_post": 6,
+      "confidence_post": 0.16455840424412504,
+      "top1_pre": 13,
+      "confidence_pre": 0.9961346904394682,
+      "support_fraction": 0.9780539723559153,
+      "fraction_quarantined_only": 0.9780539723559153,
+      "fraction_floor_only": 0.0,
+      "reason": "quarantined-support",
+      "tainted_rows": [
+        [
+          "block0.linear3",
+          0
+        ],
+        [
+          "block0.linear3",
+          11
+        ],
+        [
+          "block0.linear3",
+          12
+        ],
+        [
+          "block0.linear3",
+          25
+        ],
+        [
+          "block0.linear3",
+          34
+        ],
+        [
+          "block0.linear3",
+          53
+        ],
+        [
+          "block0.linear3",
+          60
+        ],
+        [
+          "block1.linear0",
+          17
+        ],
+        [
+          "block1.linear0",
+          49
+        ],
+        [
+          "block1.linear3",
+          0
+        ],
+        [
+          "block1.linear3",
+          5
+        ],
+        [
+          "block1.linear3",
+          8
+        ],
+        [
+          "block1.linear3",
+          13
+        ],
+        [
+          "block1.linear3",
+          18
+        ],
+        [
+          "block1.linear3",
+          21
+        ],
+        [
+          "block1.linear3",
+          24
+        ],
+        [
+          "block1.linear3",
+          28
+        ],
+        [
+          "block1.linear3",
+          35
+        ],
+        [
+          "block1.linear3",
+          46
+        ],
+        [
+          "block1.linear3",
+          49
+        ],
+        [
+          "lm_head",
+          9
+        ],
+        [
+          "lm_head",
+          10
+        ],
+        [
+          "lm_head",
+          11
+        ],
+        [
+          "lm_head",
+          12
+        ],
+        [
+          "lm_head",
+          13
+        ]
+      ],
+      "quarantined_rows": [
+        [
+          "block0.linear3",
+          0
+        ],
+        [
+          "block0.linear3",
+          11
+        ],
+        [
+          "block0.linear3",
+          12
+        ],
+        [
+          "block0.linear3",
+          25
+        ],
+        [
+          "block0.linear3",
+          34
+        ],
+        [
+          "block0.linear3",
+          53
+        ],
+        [
+          "block0.linear3",
+          60
+        ],
+        [
+          "block1.linear0",
+          17
+        ],
+        [
+          "block1.linear0",
+          49
+        ],
+        [
+          "block1.linear3",
+          0
+        ],
+        [
+          "block1.linear3",
+          5
+        ],
+        [
+          "block1.linear3",
+          8
+        ],
+        [
+          "block1.linear3",
+          13
+        ],
+        [
+          "block1.linear3",
+          18
+        ],
+        [
+          "block1.linear3",
+          21
+        ],
+        [
+          "block1.linear3",
+          24
+        ],
+        [
+          "block1.linear3",
+          28
+        ],
+        [
+          "block1.linear3",
+          35
+        ],
+        [
+          "block1.linear3",
+          46
+        ],
+        [
+          "block1.linear3",
+          49
+        ],
+        [
+          "lm_head",
+          9
+        ],
+        [
+          "lm_head",
+          10
+        ],
+        [
+          "lm_head",
+          11
+        ],
+        [
+          "lm_head",
+          12
+        ],
+        [
+          "lm_head",
+          13
+        ]
+      ],
+      "floor_rows": [],
+      "note": ""
+    },
+    "vanilla": {
+      "status": "ANSWER",
+      "answer": 13,
+      "top1_post": 13,
+      "confidence_post": 0.9827862434682143,
+      "top1_pre": 13,
+      "confidence_pre": 0.9827862434682143,
+      "support_fraction": 0.0,
+      "fraction_quarantined_only": 0.0,
+      "fraction_floor_only": 0.0,
+      "reason": null,
+      "tainted_rows": [],
+      "quarantined_rows": [],
+      "floor_rows": [],
+      "note": "no-records: vanilla model has no K-records to read"
+    },
+    "vanilla_probe_check": {
+      "top1": 13,
+      "conf": 0.9827862434682143
+    },
+    "quarantine_rows": [
+      [
+        "lm_head",
+        9
+      ],
+      [
+        "lm_head",
+        10
+      ],
+      [
+        "lm_head",
+        11
+      ],
+      [
+        "lm_head",
+        12
+      ],
+      [
+        "lm_head",
+        13
+      ],
+      [
+        "block0.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        11
+      ],
+      [
+        "block0.linear3",
+        12
+      ],
+      [
+        "block0.linear3",
+        34
+      ],
+      [
+        "block1.linear3",
+        28
+      ],
+      [
+        "block0.linear3",
+        60
+      ],
+      [
+        "block1.linear3",
+        13
+      ],
+      [
+        "block1.linear3",
+        35
+      ],
+      [
+        "block0.linear3",
+        53
+      ],
+      [
+        "block1.linear3",
+        46
+      ],
+      [
+        "block1.linear3",
+        8
+      ],
+      [
+        "block1.linear3",
+        21
+      ],
+      [
+        "block1.linear3",
+        49
+      ],
+      [
+        "block1.linear0",
+        49
+      ],
+      [
+        "block1.linear0",
+        17
+      ],
+      [
+        "block1.linear3",
+        18
+      ],
+      [
+        "block1.linear3",
+        24
+      ],
+      [
+        "block1.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        25
+      ],
+      [
+        "block1.linear3",
+        5
+      ]
+    ],
+    "upstream_rows": [
+      [
+        "block0.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        11
+      ],
+      [
+        "block0.linear3",
+        12
+      ],
+      [
+        "block0.linear3",
+        34
+      ],
+      [
+        "block1.linear3",
+        28
+      ],
+      [
+        "block0.linear3",
+        60
+      ],
+      [
+        "block1.linear3",
+        13
+      ],
+      [
+        "block1.linear3",
+        35
+      ],
+      [
+        "block0.linear3",
+        53
+      ],
+      [
+        "block1.linear3",
+        46
+      ],
+      [
+        "block1.linear3",
+        8
+      ],
+      [
+        "block1.linear3",
+        21
+      ],
+      [
+        "block1.linear3",
+        49
+      ],
+      [
+        "block1.linear0",
+        49
+      ],
+      [
+        "block1.linear0",
+        17
+      ],
+      [
+        "block1.linear3",
+        18
+      ],
+      [
+        "block1.linear3",
+        24
+      ],
+      [
+        "block1.linear3",
+        0
+      ],
+      [
+        "block0.linear3",
+        25
+      ],
+      [
+        "block1.linear3",
+        5
+      ]
+    ]
+  },
+  "mixed_probes": {
+    "results": [
+      {
+        "fact": [
+          20,
+          21,
+          3,
+          9
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 3,
+          "top1_post": 3,
+          "confidence_post": 0.9577307829459768,
+          "top1_pre": 9,
+          "confidence_pre": 0.6782041814928924,
+          "support_fraction": 0.9991814719929156,
+          "fraction_quarantined_only": 0.9991814719929156,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "quarantined_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "floor_rows": [],
+          "note": ""
+        }
+      },
+      {
+        "fact": [
+          22,
+          23,
+          4,
+          10
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 4,
+          "top1_post": 4,
+          "confidence_post": 0.9653626921369766,
+          "top1_pre": 10,
+          "confidence_pre": 0.782549407720146,
+          "support_fraction": 0.9986796343086012,
+          "fraction_quarantined_only": 0.9986796343086012,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "quarantined_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "floor_rows": [],
+          "note": ""
+        }
+      },
+      {
+        "fact": [
+          24,
+          25,
+          5,
+          11
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 5,
+          "top1_post": 5,
+          "confidence_post": 0.9296133974871305,
+          "top1_pre": 11,
+          "confidence_pre": 0.7869777359299295,
+          "support_fraction": 0.9977622796066007,
+          "fraction_quarantined_only": 0.9977622796066007,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "quarantined_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "floor_rows": [],
+          "note": ""
+        }
+      },
+      {
+        "fact": [
+          26,
+          27,
+          6,
+          12
+        ],
+        "result": {
+          "status": "ANSWER",
+          "answer": 6,
+          "top1_post": 6,
+          "confidence_post": 0.9849902349404637,
+          "top1_pre": 6,
+          "confidence_pre": 0.5179660354450639,
+          "support_fraction": -0.9016502386958785,
+          "fraction_quarantined_only": -0.9016502386958785,
+          "fraction_floor_only": 0.0,
+          "reason": null,
+          "tainted_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "quarantined_rows": [
+            [
+              "block0.linear3",
+              0
+            ],
+            [
+              "block0.linear3",
+              11
+            ],
+            [
+              "block0.linear3",
+              12
+            ],
+            [
+              "block0.linear3",
+              25
+            ],
+            [
+              "block0.linear3",
+              34
+            ],
+            [
+              "block0.linear3",
+              53
+            ],
+            [
+              "block0.linear3",
+              60
+            ],
+            [
+              "block1.linear0",
+              17
+            ],
+            [
+              "block1.linear0",
+              49
+            ],
+            [
+              "block1.linear3",
+              0
+            ],
+            [
+              "block1.linear3",
+              5
+            ],
+            [
+              "block1.linear3",
+              8
+            ],
+            [
+              "block1.linear3",
+              13
+            ],
+            [
+              "block1.linear3",
+              18
+            ],
+            [
+              "block1.linear3",
+              21
+            ],
+            [
+              "block1.linear3",
+              24
+            ],
+            [
+              "block1.linear3",
+              28
+            ],
+            [
+              "block1.linear3",
+              35
+            ],
+            [
+              "block1.linear3",
+              46
+            ],
+            [
+              "block1.linear3",
+              49
+            ],
+            [
+              "lm_head",
+              9
+            ],
+            [
+              "lm_head",
+              10
+            ],
+            [
+              "lm_head",
+              11
+            ],
+            [
+              "lm_head",
+              12
+            ],
+            [
+              "lm_head",
+              13
+            ]
+          ],
+          "floor_rows": [],
+          "note": ""
+        }
+      }
+    ],
+    "declines": 0,
+    "top1_true_count": 4
+  },
+  "invariants": {
+    "gains_restored_bit_exact": true,
+    "chain_ok": true,
+    "chain_bad": [],
+    "param_count": 105248
+  },
+  "verdict": "PASS"
+}
