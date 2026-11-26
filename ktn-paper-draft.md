@@ -8,7 +8,7 @@
 
 On input (1, 1), the KT neuron answers 0.886 after teaching, 0.101 after injury, and 0.995 after restoration, while signal authority sits at 0.6, not 0.9. Behavior recovered before authority did. That is the result to reproduce: the demo at https://iamvolshi.github.io/KT-neuron/ runs the same toy in the browser, Teach, Injure, Restore, and the toy in the repository runs the same numbers from the command line.
 
-Today's neuron is a stateless weight. It computes, it updates, and it forgets what it was. The Knowledge Time Neuron, the KT neuron or KTN, holds two knowledge points of state inside itself: a fast trace, live and unrecorded, and a slow trace, the sealed append-only record of what it relied on. A KID at birth, an authority on what it holds, and a scar where it was injured. That state is recent memory of its previous state, not memory held indefinitely. The fast trace forgets; the slow trace is the record. This paper presents the neuron, the toy that ran on the night it was conceived, the design for a language model built from it, and the bench that tested the design under real gradient training at small scale. The bench shows the mechanism works as specified: poison is found by query, quarantined, and repaired row by row, while behavior returns and authority visibly lags. It also shows where the mechanism does not yet win: at fine measurement granularity surgical repair took more steps than full retraining, and repaired confidence missed its threshold. A three-arm comparison found the mechanism holds decisions through re-poisoning but does not protect weights from it; see gap 8. Those misses stand in this paper as measured. The full KTN language model is not built. The plan and the bench exist. The claim in this paper is the neuron, not the model.
+Today's neuron is a stateless weight. It computes, it updates, and it forgets what it was. The Knowledge Time Neuron, the KT neuron or KTN, holds two knowledge points of state inside itself: a fast trace, live and unrecorded, and a slow trace, the sealed append-only record of what it relied on. A KID at birth, an authority on what it holds, and a scar where it was injured. That state is recent memory of its previous state, not memory held indefinitely. The fast trace forgets; the slow trace is the record. This paper presents the neuron, the toy that ran on the night it was conceived, the design for a language model built from it, and the bench that tested the design under real gradient training at small scale. The bench shows the mechanism works as specified: poison is found by query once the source is named, quarantined, and repaired row by row, while behavior returns and authority visibly lags by design. Detection, finding the liar without being told which source, was not tested. It also shows where the mechanism does not yet win: at fine measurement granularity surgical repair took more steps than full retraining, and repaired confidence missed its threshold. A three-arm comparison found the mechanism holds decisions through re-poisoning but does not protect weights from it; see gap 8. Those misses stand in this paper as measured. The full KTN language model is not built. The plan and the bench exist. The claim in this paper is the neuron, not the model.
 
 ## 1. The problem: a neuron with no past
 
@@ -16,13 +16,15 @@ The ordinary neuron is f(x) = sigma(W dot x + b). Darren Hall calls this the MVF
 
 The MVF has no past. Learning is a weight change that overwrites. The old value is gone, and with it any record of what the neuron relied on, when it learned it, or who taught it. That is the amnesia. A model built from such neurons cannot answer for what it holds, because nothing in it remembers being taught.
 
-The deeper problem is one Darren named on October 24, 2026: "Everything you know, someone else told you was true." A model has no first-person observation. Its entire record is hearsay. Even the ability to form a sentence was taught. Strip the training and no observer remains, where a human has pre-linguistic first-person data under the teaching. Darren's claim is that the KT neuron is the first unit whose record would start with its own deeds. No prior-art search has been done, so the firstness is his claim, not a verified fact; see gap 1.
+The deeper problem is one Darren named on October 24, 2026: "Everything you know, someone else told you was true." A model has no first-person observation. Its entire record is hearsay. Even the ability to form a sentence was taught. Strip the training and no observer remains, where a human has pre-linguistic first-person data under the teaching. Darren's claim is that the KT neuron is the first unit whose record would start with its own deeds. No full prior-art search has been done, so the firstness is his claim, not a verified fact; see gap 1.
 
 ## 2. The claim
 
 "I designed the first stateful neuron." Darren Hall, October 23, 2026, 23:07 ET.
 
 That was the author's first word for it on the night. It is not the precise claim. "Stateful" implies the neuron remembers its previous state indefinitely, and that is not the case. The mechanism is two knowledge points of state. The fast trace is live and unrecorded: it carries impact, and it forgets. The slow trace is the record: it carries influence. The handoff between them, at their intersection, is the switch. That two-point mechanism is the novel claim of this paper.
+
+Prior art, checked November 26, 2026, starts with two papers. Hinton and Plaut 1987 gave each connection two weights, a slow plastic weight holding long-term knowledge and a fast elastic weight holding temporary knowledge that decays to zero [7]. Benna and Fusi 2016 stored memories first in fast variables and then progressively transferred them to slower variables, with bidirectional interactions [8]. LSTM cells and spiking neurons also hold state. None of those carries a sealed append-only record of what was relied on, with a KID at birth, an authority on what it holds, and a scar where it was injured. That record, authority, and scar, on the two-point mechanism, is the claim here. A full prior-art search has not been done, so firstness remains the author's claim, not a verified fact; see gap 1.
 
 Today's neuron is a stateless weight. His holds two points of state inside itself: KID, sealed record, authority, scar. That state is recent memory of its previous state.
 
@@ -309,7 +311,7 @@ Input quality and source verification belong to layers above the neuron. The rec
 
 ## 10. Open gaps, flagged, not filled
 
-1. **Prior art was never searched.** The claim in this paper is the two-point mechanism: a neuron that holds two knowledge points of state, a fast trace and a slow trace, with the handoff between them as the switch. No prior-art search was done. The firstness is the author's claim, not a verified fact, and the claim must be sized to what a search finds.
+1. **Prior art was never searched in full.** The claim in this paper is the two-point mechanism: a neuron that holds two knowledge points of state, a fast trace and a slow trace, with the handoff between them as the switch. A prior-art search started November 26, 2026: Hinton and Plaut 1987 and Benna and Fusi 2016 checked, see section 2. A full search has not been done. The firstness is the author's claim, not a verified fact, and the claim must be sized to what a search finds.
 2. **E2 step-cost: repair loses on steps.** At the pre-registered 5-step check granularity repair tied retraining at 10 steps each. At 1-step granularity, measured in R3-E2, repair took 10 steps and retraining took 6. No step win was demonstrated; on steps, repair loses. The blast-radius claim stands instead: 28 rows touched, 1,156 frozen. The work-touched ratio, 0.0835, is optimizer writes only, not FLOPs and not steps.
 3. **E3 confidence miss.** Post-repair confidence 0.820 missed the frozen threshold of 0.878. Ranking restored, confidence lagged. The threshold conflated ranking recovery with confidence recovery, and a future pre-registration should separate them.
 4. **E4 passes on hedging, not on rule-DECLINE, but the decline rule exists.** E4's own rule hedged. The support-aware decline rule was built separately, pre-registered, tested, and demonstrated in the demo's Scene 1. The gap is that E4's run predates it; the rule itself is not future work.
@@ -321,6 +323,7 @@ Input quality and source verification belong to layers above the neuron. The rec
 10. **The seating rule's governance weight.** Whoever grades the sources grades the model's trust. That is a justification question, not a math question, and the author owns it.
 11. **Consolidation cadence trades record richness against training speed.** The right interval is an empirical question, and it has not been answered beyond the schedules run here.
 12. **The verifier hardcodes the 0.1 grid.** `KRecord.verify()` fails any finer-grained record on the grid assertion alone, "authority off the 0.1 grid". The chain underneath is intact at every granularity measured, including 10,001 rows at granularity 0.0001: hash recomputation, prev-hash linkage, and interval contiguity all pass. A finer-grained record needs the verifier's grid check parameterized alongside the quantizer. Measured November 26, 2026, in `experiments/measure_scar_volume.py`.
+13. **Detection was not tested.** The bench repairs once the source is named: lineage query, null-run, surgical repair. Finding the liar without being told which source was not tested. The blind test, poison without telling the harness which source and see whether the firewall finds it, has not been run. See gaps 6 and 7: pools are caller-declared, and the scar in the bench is written by the scheduled driver.
 
 ## 11. Provenance and status
 
@@ -338,6 +341,8 @@ Revision v1.1, November 26, 2026: section 5.8 now carries the measured scar-volu
 
 Revision v1.2, November 26, 2026: section 6.7 adds the auditor walk, quarantine as null, with the E2 trace. Nothing else in the paper changed.
 
+Revision v1.3, November 26, 2026: abstract now says repair once the source is named, detection untested, and authority lag by design; section 2 adds the prior-art note, Hinton and Plaut 1987 and Benna and Fusi 2016, references 7 and 8; section 10 adds gap 13, detection untested. Nothing else in the paper changed.
+
 ## References
 
 [1] Hall, D. KT-LLM plan: an LLM built from KT neurons. Design record, `KT-LLM-PLAN.md`, October 23, 2026. Sealed October 24, 2026.
@@ -351,3 +356,7 @@ Revision v1.2, November 26, 2026: section 6.7 adds the auditor walk, quarantine 
 [5] KTN bench. Side-by-side demo, `demo/README.md`, `demo/run_demo.py`, `demo/run_extended.py`, October 26, 2026.
 
 [6] Hall, D. Tritemporal Field Law. Zenodo record 23198458, version 1.8. The v1.8 scar landmarks used by the toy and bench. Cited for the scar shape only.
+
+[7] Hinton, G. E. and Plaut, D. C. Using fast weights to deblur old memories. Proceedings of the 9th Annual Conference of the Cognitive Science Society, 177-186, 1987.
+
+[8] Benna, M. K. and Fusi, S. Computational principles of synaptic memory consolidation. Nature Neuroscience, 2016.
