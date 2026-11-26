@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "address": 0.5,
+      "table": "A",
+      "weights": [
+        2.0,
+        1.0
+      ],
+      "output": 0.952574
+    },
+    {
+      "address": 0.6,
+      "table": "B",
+      "weights": [
+        0.5,
+        1.0
+      ],
+      "output": 0.817574
+    },
+    {
+      "address": 0.7,
+      "table": "C",
+      "weights": [
+        -1.0,
+        3.0
+      ],
+      "output": 0.880797
+    },
+    {
+      "address": 0.8,
+      "table": "A",
+      "weights": [
+        2.0,
+        1.0
+      ],
+      "output": 0.952574
+    },
+    {
+      "address": 0.9,
+      "table": "B",
+      "weights": [
+        0.5,
+        1.0
+      ],
+      "output": 0.817574
+    }
+  ],
+  "checks": {
+    "different_addresses_different_outputs": true,
+    "same_table_same_output": true,
+    "addresses_0_and_3_share_table_A": true,
+    "addresses_1_and_4_share_table_B": true,
+    "weights_untouched": true
+  },
+  "all_pass": true
+}
