@@ -221,6 +221,20 @@ Legs: KT post-quarantine P(true) 0.943 at or above sender-clean baseline 0.944 m
 
 Verdict: PASS, all legs. The side-by-side the demo stands on is now evidenced: same poison, vanilla pair merges it invisibly with no record and no repair, KT pair transfers the record with it, finds it by lineage query, quarantines it, repairs it, and carries a visible authority lag. Note the repair and retrain step tie repeats here, KT repair 10 versus vanilla retrain 10. E5's verdict carries no step-cost leg, so it stands, but the tie is disclosed rather than hidden.
 
+### 6.7 Auditor walk: quarantine, null, and return
+
+Quarantine means null. The signal gets zero authority to act, zero contribution at decision time. The row is out of the computation.
+
+Quarantine does not mean the belief was isolated, the weight was removed, or the belief was deleted. The weight underneath stays poisoned until repair touches it. The record proves the decision was gated, not that the belief was isolated.
+
+Walk the E2 trace. Poison is found by lineage query, one entry, source "consolidation:1". Firewall pot runs 1.0, 2.0, 3.0 and ENGAGED. Engaged, liar-lineage gains held at 0. Post-null probes: 0.688 true, 0.0085 liar, top-1 true 3 of 4.
+
+Pot bled to 3.0, gains restored without repair: 0.751 true, 0.016 liar, top-1 true 4 of 4. Repair then seats 28 of 28 rows. Post-repair probes: 0.820 true, 0.118 liar, top-1 true 4 of 4, authority 0.6. Authority heals on clean consolidations, 0.6 to 0.7 over 6, deficit decays 0.01 per clean consolidation.
+
+Null is the deepest scar, and scar depth is the emergency alert, the pain sensor. Every step is in the record, hash-chained: lineage, pot trajectory, gain, scar, consolidations. An auditor can walk it unaided.
+
+Null is not a hiding place, it is a state with a history.
+
 ## 7. Round 3: the regulation, the tail, the tick
 
 Round 3 ran October 26, 2026, under a frozen pre-registration, `preregistration-round3-2026-10-26.md`. All three experiments passed. Round 3 closed the suite at 107 tests.
@@ -321,6 +335,8 @@ Posture note: this material was held dark from October 23, 2026, under the autho
 The filed provisional, 64/182,709, covers the record machine as filed October 23, 2026. The KT-neuron mechanism is not in it. Any filing decision is Darren's, with counsel, later.
 
 Revision v1.1, November 26, 2026: section 5.8 now carries the measured scar-volume results, the law in the author's words, and the float64 ceiling; section 5 adds the primal-architecture touch; section 9 adds the self-improvement and verification-layer touches; section 10 adds gap 12, the verifier's hardcoded grid. Nothing else in the paper changed.
+
+Revision v1.2, November 26, 2026: section 6.7 adds the auditor walk, quarantine as null, with the E2 trace. Nothing else in the paper changed.
 
 ## References
 
