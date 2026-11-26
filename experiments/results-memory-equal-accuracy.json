@@ -1,0 +1,443 @@
+{
+  "preregistration": "experiments/preregistration-memory-equal-accuracy.md",
+  "command": "python3 experiments/measure_scar_volume.py",
+  "seeds": {
+    "model_build": 0,
+    "other_measurements": "none (fixed grid values, no RNG)"
+  },
+  "note": "No parameter-count race was run (Darren correction, Nov 26).",
+  "m1_five_v1_points": {
+    "birth": 0.5,
+    "clean": 0.8,
+    "poison": 0.9,
+    "repair": 0.6,
+    "decay_plus6": 0.7,
+    "five_points": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "grid_levels_v1": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "expected": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "match": true
+  },
+  "m2_structural_counts": {
+    "param_count": 105248,
+    "n_kids": 1184,
+    "record_rows_after_1_consolidation": 2368,
+    "snapshot_bytes_each": 841984,
+    "expected": {
+      "param_count": 105248,
+      "n_kids": 1184,
+      "record_rows_after_1_consolidation": 2368,
+      "snapshot_bytes_each": 841984
+    },
+    "match": true
+  },
+  "m3_grid_seating": [
+    {
+      "granularity": 0.1,
+      "grid_values": 11,
+      "seated_rows": 11,
+      "chain": "OK: 11 rows, chain sealed, intervals contiguous, k now 11",
+      "chain_ok": true,
+      "verify_failure_cause": null,
+      "structural_chain_ok": true,
+      "structural_chain_note": "11 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 4083,
+      "bytes_per_row": 371.1818181818182,
+      "pool_seats_stable": {
+        "clean": 0.8,
+        "poison": 0.9,
+        "repair": 0.6
+      },
+      "max_configurations": 78
+    },
+    {
+      "granularity": 0.01,
+      "grid_values": 101,
+      "seated_rows": 101,
+      "chain": "OK: 101 rows, chain sealed, intervals contiguous, k now 101",
+      "chain_ok": true,
+      "verify_failure_cause": null,
+      "structural_chain_ok": true,
+      "structural_chain_note": "101 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 37926,
+      "bytes_per_row": 375.5049504950495,
+      "pool_seats_stable": {
+        "clean": 0.8,
+        "poison": 0.9,
+        "repair": 0.6
+      },
+      "max_configurations": 5253
+    },
+    {
+      "granularity": 0.001,
+      "grid_values": 1001,
+      "seated_rows": 1001,
+      "chain": "OK: 1001 rows, chain sealed, intervals contiguous, k now 1001",
+      "chain_ok": true,
+      "verify_failure_cause": null,
+      "structural_chain_ok": true,
+      "structural_chain_note": "1001 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 380829,
+      "bytes_per_row": 380.4485514485514,
+      "pool_seats_stable": {
+        "clean": 0.8,
+        "poison": 0.9,
+        "repair": 0.6
+      },
+      "max_configurations": 502503
+    },
+    {
+      "granularity": 0.0001,
+      "grid_values": 10001,
+      "seated_rows": 10001,
+      "chain": "OK: 10001 rows, chain sealed, intervals contiguous, k now 10001",
+      "chain_ok": true,
+      "verify_failure_cause": null,
+      "structural_chain_ok": true,
+      "structural_chain_note": "10001 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 3854832,
+      "bytes_per_row": 385.44465553444655,
+      "pool_seats_stable": {
+        "clean": 0.8,
+        "poison": 0.9,
+        "repair": 0.6
+      },
+      "max_configurations": 50025003
+    }
+  ],
+  "m4_points_scaling_g_0.1": [
+    {
+      "n_points": 1,
+      "volume_per_point": 0.1,
+      "total_volume": 0.1,
+      "total_points": 3,
+      "configurations": 3
+    },
+    {
+      "n_points": 2,
+      "volume_per_point": 0.1,
+      "total_volume": 0.2,
+      "total_points": 4,
+      "configurations": 6
+    },
+    {
+      "n_points": 5,
+      "volume_per_point": 0.1,
+      "total_volume": 0.5,
+      "total_points": 7,
+      "configurations": 21
+    },
+    {
+      "n_points": 10,
+      "volume_per_point": 0.1,
+      "total_volume": 1.0,
+      "total_points": 12,
+      "configurations": 66
+    },
+    {
+      "n_points": 11,
+      "volume_per_point": 0.1,
+      "total_volume": 1.1,
+      "total_points": 13,
+      "configurations": 78
+    }
+  ],
+  "m5_subinterval_chop_g_0.1": [
+    {
+      "chop_fineness": 0.1,
+      "pieces": 1,
+      "distinct_float64_midpoints": 1,
+      "weights_per_volume": 1,
+      "weights_from_5_points": 5,
+      "expected_weights_per_volume": 1,
+      "match": true
+    },
+    {
+      "chop_fineness": 0.01,
+      "pieces": 10,
+      "distinct_float64_midpoints": 10,
+      "weights_per_volume": 10,
+      "weights_from_5_points": 50,
+      "expected_weights_per_volume": 10,
+      "match": true
+    },
+    {
+      "chop_fineness": 0.001,
+      "pieces": 100,
+      "distinct_float64_midpoints": 100,
+      "weights_per_volume": 100,
+      "weights_from_5_points": 500,
+      "expected_weights_per_volume": 100,
+      "match": true
+    },
+    {
+      "chop_fineness": 0.0001,
+      "pieces": 1000,
+      "distinct_float64_midpoints": 1000,
+      "weights_per_volume": 1000,
+      "weights_from_5_points": 5000,
+      "expected_weights_per_volume": 1000,
+      "match": true
+    },
+    {
+      "chop_fineness": 1e-05,
+      "pieces": 10000,
+      "distinct_float64_midpoints": 10000,
+      "weights_per_volume": 10000,
+      "weights_from_5_points": 50000,
+      "expected_weights_per_volume": 10000,
+      "match": true
+    },
+    {
+      "chop_fineness": 1e-06,
+      "pieces": 100000,
+      "distinct_float64_midpoints": 100000,
+      "weights_per_volume": 100000,
+      "weights_from_5_points": 500000,
+      "expected_weights_per_volume": 100000,
+      "match": true
+    }
+  ],
+  "m6_digit_chop": [
+    {
+      "volumetric_number": 0.1,
+      "decimal_places": 1,
+      "written": "0.1",
+      "digits": [
+        "0",
+        "1"
+      ],
+      "weights_per_volume": 2,
+      "expected_weights_per_volume": 2,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.1,
+      "decimal_places": 2,
+      "written": "0.10",
+      "digits": [
+        "0",
+        "1",
+        "0"
+      ],
+      "weights_per_volume": 3,
+      "expected_weights_per_volume": 3,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.1,
+      "decimal_places": 3,
+      "written": "0.100",
+      "digits": [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 4,
+      "expected_weights_per_volume": 4,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.1,
+      "decimal_places": 6,
+      "written": "0.100000",
+      "digits": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 7,
+      "expected_weights_per_volume": 7,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.1,
+      "decimal_places": 10,
+      "written": "0.1000000000",
+      "digits": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 11,
+      "expected_weights_per_volume": 11,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.1,
+      "decimal_places": 15,
+      "written": "0.100000000000000",
+      "digits": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 16,
+      "expected_weights_per_volume": 16,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.8,
+      "decimal_places": 1,
+      "written": "0.8",
+      "digits": [
+        "0",
+        "8"
+      ],
+      "weights_per_volume": 2,
+      "expected_weights_per_volume": 2,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.8,
+      "decimal_places": 2,
+      "written": "0.80",
+      "digits": [
+        "0",
+        "8",
+        "0"
+      ],
+      "weights_per_volume": 3,
+      "expected_weights_per_volume": 3,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.8,
+      "decimal_places": 3,
+      "written": "0.800",
+      "digits": [
+        "0",
+        "8",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 4,
+      "expected_weights_per_volume": 4,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.8,
+      "decimal_places": 6,
+      "written": "0.800000",
+      "digits": [
+        "0",
+        "8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 7,
+      "expected_weights_per_volume": 7,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.8,
+      "decimal_places": 10,
+      "written": "0.8000000000",
+      "digits": [
+        "0",
+        "8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 11,
+      "expected_weights_per_volume": 11,
+      "match": true
+    },
+    {
+      "volumetric_number": 0.8,
+      "decimal_places": 15,
+      "written": "0.800000000000000",
+      "digits": [
+        "0",
+        "8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "weights_per_volume": 16,
+      "expected_weights_per_volume": 16,
+      "match": true
+    }
+  ],
+  "m7_float64_ceiling": {
+    "volume": [
+      0.5,
+      0.6
+    ],
+    "spacing_at_0.5": 1.1102230246251565e-16,
+    "spacing_is_2_to_minus_53": true,
+    "distinct_float64_in_volume": 900719925474100,
+    "max_weights_per_volume": 900719925474100,
+    "max_weights_from_5_points": 4503599627370500
+  }
+}

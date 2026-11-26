@@ -29,7 +29,7 @@ html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>The First Multi-State Neuron: The Knowledge Time Neuron</title>
+<title>The Multi-State Neuron: The Knowledge Time Neuron</title>
 <style>
 @page {{
   size: Letter;

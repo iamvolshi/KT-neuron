@@ -22,18 +22,31 @@ import hashlib
 import json
 
 
+def q(a: float, g: float = 0.1) -> float:
+    """Quantize authority to the grid of step g (default 0.1).
+
+    g must divide 1.0 (0.1, 0.01, 0.001, ...). The grid is the
+    record's granularity: finer grids hold more distinct values.
+    """
+    n = round(1.0 / g)
+    return round(min(1.0, max(0.0, a)) * n) / n
+
+
 def q10(a: float) -> float:
     """Authority lives on the 0.1 grid: 11 levels, 0.0 .. 1.0."""
-    return round(min(1.0, max(0.0, a)) * 10) / 10.0
+    return q(a, 0.1)
 
 
 class KRecord:
     """Append-only belief record. Closing an interval is the only mutation."""
 
-    def __init__(self, kid: str):
+    def __init__(self, kid: str, grid: float = 0.1):
         if not kid:
             raise ValueError("no KID, no record: a KID is required at birth")
+        if grid <= 0 or grid > 1 or abs(1.0 / grid - round(1.0 / grid)) > 1e-9:
+            raise ValueError("grid must divide 1.0 (0.1, 0.01, 0.001, ...)")
         self.kid = kid
+        self.grid = grid
         self.k = 0            # knowledge time: advances ONLY on epistemic events
         self.rows = []        # sealed + open belief rows
         self.seq = 0
@@ -46,7 +59,7 @@ class KRecord:
 
     def open_belief(self, field, value, authority, source):
         row = {"seq": self.seq, "kid": self.kid, "field": field, "value": value,
-               "authority": q10(authority), "source": source,
+               "authority": q(authority, self.grid), "source": source,
                "k_start": self.k, "k_end": None,
                "prev_hash": self.rows[-1]["hash"] if self.rows else "GENESIS"}
         row["hash"] = self._hash(row)
@@ -77,17 +90,23 @@ class KRecord:
         carry: restoration is never free.
         """
         cur = self.standing(field)
-        if cur is not None and q10(authority) < cur["authority"]:
+        if cur is not None and q(authority, self.grid) < cur["authority"]:
             return ("candidate", cur)
-        if cur is not None and q10(authority) == cur["authority"] and source == cur["source"]:
+        if cur is not None and q(authority, self.grid) == cur["authority"] and source == cur["source"]:
             return ("reaffirmed", cur)
         if cur is not None:
             self.close_belief(cur)
-        seated = q10(authority - authority_dock)
+        seated = q(authority - authority_dock, self.grid)
         return ("seated", self.open_belief(field, value, seated, source))
 
-    def verify(self):
-        """Walk the chain: hashes, linkage, grid, interval contiguity."""
+    def verify(self, grid: float = None):
+        """Walk the chain: hashes, linkage, grid, interval contiguity.
+
+        Checks the record's own grid by default (0.1 for v1 records);
+        pass a grid to check a record against a different one.
+        """
+        g = self.grid if grid is None else grid
+        n = round(1.0 / g)
         prev = "GENESIS"
         last_close = {}
         for row in self.rows:
@@ -95,8 +114,8 @@ class KRecord:
                 return f"FAIL: row seq={row['seq']} field={row['field']} -- hash mismatch (forged or altered)"
             if row["prev_hash"] != prev:
                 return f"FAIL: row seq={row['seq']} -- chain link broken"
-            if abs(row["authority"] * 10 - round(row["authority"] * 10)) > 1e-9:
-                return f"FAIL: row seq={row['seq']} -- authority off the 0.1 grid"
+            if abs(row["authority"] * n - round(row["authority"] * n)) > 1e-9:
+                return f"FAIL: row seq={row['seq']} -- authority off the {g} grid"
             f = row["field"]
             if f in last_close and row["k_start"] != last_close[f]:
                 return f"FAIL: row seq={row['seq']} field={f} -- interval gap (opened at k={row['k_start']}, predecessor closed at k={last_close[f]})"

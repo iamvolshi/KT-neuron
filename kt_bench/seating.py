@@ -23,7 +23,7 @@ feedback loop, instead of taking caller-declared pools. Caller-declared
 is the placeholder until then.
 """
 
-from kt_neuron.record import q10
+from kt_neuron.record import q
 
 AGREEMENT_BONUS = 0.1
 BAD_SOURCE_DOCK = 0.3
@@ -31,14 +31,14 @@ AUTHORITY_CAP = 0.9
 BIRTH_AUTHORITY = 0.5
 
 
-def seat_authority(pool):
+def seat_authority(pool, grid: float = 0.1):
     """Generic policy: mean of declared source authorities.
 
     - No sources declared -> birth authority 0.5.
     - One source -> its own authority (no bonus: single-source caps).
     - Two or more distinct sources -> mean + 0.1 agreement bonus.
     - A known-bad source in the pool -> dock 0.3.
-    - Hard cap 0.9, floor 0.0, quantized to the record's 0.1 grid.
+    - Hard cap 0.9, floor 0.0, quantized to the record's grid.
     """
     if not isinstance(pool, dict):
         pool = {}
@@ -53,4 +53,4 @@ def seat_authority(pool):
     if bad & set(sources):
         seated -= BAD_SOURCE_DOCK
     seated = min(seated, AUTHORITY_CAP)
-    return q10(seated)
+    return q(seated, grid)
