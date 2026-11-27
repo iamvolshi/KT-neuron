@@ -1,0 +1,1285 @@
+{
+  "preregistration": "experiments/preregistration-control-surface.md",
+  "command": "python3 experiments/measure_control_surface.py",
+  "seeds": "none (no RNG anywhere)",
+  "note": "No parameter-count race was run (Darren correction, Nov 26). No paper changes. Bench only.",
+  "w1_steps": [
+    {
+      "granularity": 0.1,
+      "steps": 11,
+      "first_step": 1.0,
+      "last_step": 0.0,
+      "expected_steps": 11,
+      "match": true
+    },
+    {
+      "granularity": 0.01,
+      "steps": 101,
+      "first_step": 1.0,
+      "last_step": 0.0,
+      "expected_steps": 101,
+      "match": true
+    },
+    {
+      "granularity": 0.001,
+      "steps": 1001,
+      "first_step": 1.0,
+      "last_step": 0.0,
+      "expected_steps": 1001,
+      "match": true
+    },
+    {
+      "granularity": 0.0001,
+      "steps": 10001,
+      "first_step": 1.0,
+      "last_step": 0.0,
+      "expected_steps": 10001,
+      "match": true
+    }
+  ],
+  "w2_record_seating": [
+    {
+      "granularity": 0.1,
+      "grid_values": 11,
+      "seated_rows": 11,
+      "chain": "OK: 11 rows, chain sealed, intervals contiguous, k now 11",
+      "chain_ok": true,
+      "structural_chain_ok": true,
+      "structural_chain_note": "11 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 4083,
+      "bytes_per_row": 371.1818181818182
+    },
+    {
+      "granularity": 0.01,
+      "grid_values": 101,
+      "seated_rows": 101,
+      "chain": "OK: 101 rows, chain sealed, intervals contiguous, k now 101",
+      "chain_ok": true,
+      "structural_chain_ok": true,
+      "structural_chain_note": "101 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 37926,
+      "bytes_per_row": 375.5049504950495
+    },
+    {
+      "granularity": 0.001,
+      "grid_values": 1001,
+      "seated_rows": 1001,
+      "chain": "OK: 1001 rows, chain sealed, intervals contiguous, k now 1001",
+      "chain_ok": true,
+      "structural_chain_ok": true,
+      "structural_chain_note": "1001 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 380829,
+      "bytes_per_row": 380.4485514485514
+    },
+    {
+      "granularity": 0.0001,
+      "grid_values": 10001,
+      "seated_rows": 10001,
+      "chain": "OK: 10001 rows, chain sealed, intervals contiguous, k now 10001",
+      "chain_ok": true,
+      "structural_chain_ok": true,
+      "structural_chain_note": "10001 rows, hashes/linkage/contiguity OK",
+      "record_json_bytes": 3854832,
+      "bytes_per_row": 385.44465553444655
+    }
+  ],
+  "w3_digit_strings": [
+    {
+      "granularity": 0.1,
+      "decimal_places": 1,
+      "steps": 11,
+      "distinct_strings": 11,
+      "all_steps_distinct": true,
+      "weights_per_thread": 2,
+      "total_digit_weights": 22
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 2,
+      "steps": 11,
+      "distinct_strings": 11,
+      "all_steps_distinct": true,
+      "weights_per_thread": 3,
+      "total_digit_weights": 33
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 3,
+      "steps": 11,
+      "distinct_strings": 11,
+      "all_steps_distinct": true,
+      "weights_per_thread": 4,
+      "total_digit_weights": 44
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 6,
+      "steps": 11,
+      "distinct_strings": 11,
+      "all_steps_distinct": true,
+      "weights_per_thread": 7,
+      "total_digit_weights": 77
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 10,
+      "steps": 11,
+      "distinct_strings": 11,
+      "all_steps_distinct": true,
+      "weights_per_thread": 11,
+      "total_digit_weights": 121
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 15,
+      "steps": 11,
+      "distinct_strings": 11,
+      "all_steps_distinct": true,
+      "weights_per_thread": 16,
+      "total_digit_weights": 176
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 1,
+      "steps": 101,
+      "distinct_strings": 11,
+      "all_steps_distinct": false,
+      "weights_per_thread": 2,
+      "total_digit_weights": 202
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 2,
+      "steps": 101,
+      "distinct_strings": 101,
+      "all_steps_distinct": true,
+      "weights_per_thread": 3,
+      "total_digit_weights": 303
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 3,
+      "steps": 101,
+      "distinct_strings": 101,
+      "all_steps_distinct": true,
+      "weights_per_thread": 4,
+      "total_digit_weights": 404
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 6,
+      "steps": 101,
+      "distinct_strings": 101,
+      "all_steps_distinct": true,
+      "weights_per_thread": 7,
+      "total_digit_weights": 707
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 10,
+      "steps": 101,
+      "distinct_strings": 101,
+      "all_steps_distinct": true,
+      "weights_per_thread": 11,
+      "total_digit_weights": 1111
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 15,
+      "steps": 101,
+      "distinct_strings": 101,
+      "all_steps_distinct": true,
+      "weights_per_thread": 16,
+      "total_digit_weights": 1616
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 1,
+      "steps": 1001,
+      "distinct_strings": 11,
+      "all_steps_distinct": false,
+      "weights_per_thread": 2,
+      "total_digit_weights": 2002
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 2,
+      "steps": 1001,
+      "distinct_strings": 101,
+      "all_steps_distinct": false,
+      "weights_per_thread": 3,
+      "total_digit_weights": 3003
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 3,
+      "steps": 1001,
+      "distinct_strings": 1001,
+      "all_steps_distinct": true,
+      "weights_per_thread": 4,
+      "total_digit_weights": 4004
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 6,
+      "steps": 1001,
+      "distinct_strings": 1001,
+      "all_steps_distinct": true,
+      "weights_per_thread": 7,
+      "total_digit_weights": 7007
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 10,
+      "steps": 1001,
+      "distinct_strings": 1001,
+      "all_steps_distinct": true,
+      "weights_per_thread": 11,
+      "total_digit_weights": 11011
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 15,
+      "steps": 1001,
+      "distinct_strings": 1001,
+      "all_steps_distinct": true,
+      "weights_per_thread": 16,
+      "total_digit_weights": 16016
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 1,
+      "steps": 10001,
+      "distinct_strings": 11,
+      "all_steps_distinct": false,
+      "weights_per_thread": 2,
+      "total_digit_weights": 20002
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 2,
+      "steps": 10001,
+      "distinct_strings": 101,
+      "all_steps_distinct": false,
+      "weights_per_thread": 3,
+      "total_digit_weights": 30003
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 3,
+      "steps": 10001,
+      "distinct_strings": 1001,
+      "all_steps_distinct": false,
+      "weights_per_thread": 4,
+      "total_digit_weights": 40004
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 6,
+      "steps": 10001,
+      "distinct_strings": 10001,
+      "all_steps_distinct": true,
+      "weights_per_thread": 7,
+      "total_digit_weights": 70007
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 10,
+      "steps": 10001,
+      "distinct_strings": 10001,
+      "all_steps_distinct": true,
+      "weights_per_thread": 11,
+      "total_digit_weights": 110011
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 15,
+      "steps": 10001,
+      "distinct_strings": 10001,
+      "all_steps_distinct": true,
+      "weights_per_thread": 16,
+      "total_digit_weights": 160016
+    }
+  ],
+  "w4_subinterval_chop": [
+    {
+      "granularity": 0.1,
+      "chop_fineness": 0.1,
+      "cells": 10,
+      "pieces_per_cell": 1,
+      "distinct_midpoints_total": 10,
+      "weights_per_cell": 1,
+      "total_subinterval_weights": 10,
+      "expected_total": 10,
+      "match": true
+    },
+    {
+      "granularity": 0.1,
+      "chop_fineness": 0.01,
+      "cells": 10,
+      "pieces_per_cell": 10,
+      "distinct_midpoints_total": 100,
+      "weights_per_cell": 10,
+      "total_subinterval_weights": 100,
+      "expected_total": 100,
+      "match": true
+    },
+    {
+      "granularity": 0.1,
+      "chop_fineness": 0.001,
+      "cells": 10,
+      "pieces_per_cell": 100,
+      "distinct_midpoints_total": 1000,
+      "weights_per_cell": 100,
+      "total_subinterval_weights": 1000,
+      "expected_total": 1000,
+      "match": true
+    },
+    {
+      "granularity": 0.1,
+      "chop_fineness": 0.0001,
+      "cells": 10,
+      "pieces_per_cell": 1000,
+      "distinct_midpoints_total": 10000,
+      "weights_per_cell": 1000,
+      "total_subinterval_weights": 10000,
+      "expected_total": 10000,
+      "match": true
+    },
+    {
+      "granularity": 0.1,
+      "chop_fineness": 1e-05,
+      "cells": 10,
+      "pieces_per_cell": 10000,
+      "distinct_midpoints_total": 100000,
+      "weights_per_cell": 10000,
+      "total_subinterval_weights": 100000,
+      "expected_total": 100000,
+      "match": true
+    },
+    {
+      "granularity": 0.1,
+      "chop_fineness": 1e-06,
+      "cells": 10,
+      "pieces_per_cell": 100000,
+      "distinct_midpoints_total": 1000000,
+      "weights_per_cell": 100000,
+      "total_subinterval_weights": 1000000,
+      "expected_total": 1000000,
+      "match": true
+    },
+    {
+      "granularity": 0.01,
+      "chop_fineness": 0.01,
+      "cells": 100,
+      "pieces_per_cell": 1,
+      "distinct_midpoints_total": 100,
+      "weights_per_cell": 1,
+      "total_subinterval_weights": 100,
+      "expected_total": 100,
+      "match": true
+    },
+    {
+      "granularity": 0.01,
+      "chop_fineness": 0.001,
+      "cells": 100,
+      "pieces_per_cell": 10,
+      "distinct_midpoints_total": 1000,
+      "weights_per_cell": 10,
+      "total_subinterval_weights": 1000,
+      "expected_total": 1000,
+      "match": true
+    },
+    {
+      "granularity": 0.01,
+      "chop_fineness": 0.0001,
+      "cells": 100,
+      "pieces_per_cell": 100,
+      "distinct_midpoints_total": 10000,
+      "weights_per_cell": 100,
+      "total_subinterval_weights": 10000,
+      "expected_total": 10000,
+      "match": true
+    },
+    {
+      "granularity": 0.01,
+      "chop_fineness": 1e-05,
+      "cells": 100,
+      "pieces_per_cell": 1000,
+      "distinct_midpoints_total": 100000,
+      "weights_per_cell": 1000,
+      "total_subinterval_weights": 100000,
+      "expected_total": 100000,
+      "match": true
+    },
+    {
+      "granularity": 0.01,
+      "chop_fineness": 1e-06,
+      "cells": 100,
+      "pieces_per_cell": 10000,
+      "distinct_midpoints_total": 1000000,
+      "weights_per_cell": 10000,
+      "total_subinterval_weights": 1000000,
+      "expected_total": 1000000,
+      "match": true
+    },
+    {
+      "granularity": 0.001,
+      "chop_fineness": 0.001,
+      "cells": 1000,
+      "pieces_per_cell": 1,
+      "distinct_midpoints_total": 1000,
+      "weights_per_cell": 1,
+      "total_subinterval_weights": 1000,
+      "expected_total": 1000,
+      "match": true
+    },
+    {
+      "granularity": 0.001,
+      "chop_fineness": 0.0001,
+      "cells": 1000,
+      "pieces_per_cell": 10,
+      "distinct_midpoints_total": 10000,
+      "weights_per_cell": 10,
+      "total_subinterval_weights": 10000,
+      "expected_total": 10000,
+      "match": true
+    },
+    {
+      "granularity": 0.001,
+      "chop_fineness": 1e-05,
+      "cells": 1000,
+      "pieces_per_cell": 100,
+      "distinct_midpoints_total": 100000,
+      "weights_per_cell": 100,
+      "total_subinterval_weights": 100000,
+      "expected_total": 100000,
+      "match": true
+    },
+    {
+      "granularity": 0.001,
+      "chop_fineness": 1e-06,
+      "cells": 1000,
+      "pieces_per_cell": 1000,
+      "distinct_midpoints_total": 1000000,
+      "weights_per_cell": 1000,
+      "total_subinterval_weights": 1000000,
+      "expected_total": 1000000,
+      "match": true
+    },
+    {
+      "granularity": 0.0001,
+      "chop_fineness": 0.0001,
+      "cells": 10000,
+      "pieces_per_cell": 1,
+      "distinct_midpoints_total": 10000,
+      "weights_per_cell": 1,
+      "total_subinterval_weights": 10000,
+      "expected_total": 10000,
+      "match": true
+    },
+    {
+      "granularity": 0.0001,
+      "chop_fineness": 1e-05,
+      "cells": 10000,
+      "pieces_per_cell": 10,
+      "distinct_midpoints_total": 100000,
+      "weights_per_cell": 10,
+      "total_subinterval_weights": 100000,
+      "expected_total": 100000,
+      "match": true
+    },
+    {
+      "granularity": 0.0001,
+      "chop_fineness": 1e-06,
+      "cells": 10000,
+      "pieces_per_cell": 100,
+      "distinct_midpoints_total": 1000000,
+      "weights_per_cell": 100,
+      "total_subinterval_weights": 1000000,
+      "expected_total": 1000000,
+      "match": true
+    }
+  ],
+  "w5_determinism": {
+    "two_in_process_runs_identical": true
+  },
+  "w6_predictability": [
+    {
+      "granularity": 0.1,
+      "steps_compared": 11,
+      "all_match": true,
+      "mismatches": []
+    },
+    {
+      "granularity": 0.01,
+      "steps_compared": 101,
+      "all_match": true,
+      "mismatches": []
+    },
+    {
+      "granularity": 0.001,
+      "steps_compared": 1001,
+      "all_match": true,
+      "mismatches": []
+    },
+    {
+      "granularity": 0.0001,
+      "steps_compared": 10001,
+      "all_match": true,
+      "mismatches": []
+    }
+  ],
+  "w7_control_step_0.7": [
+    {
+      "granularity": 0.1,
+      "control_step": 0.7,
+      "control": {
+        "digit_string": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999089,
+        "output_fullsum": 0.999089
+      },
+      "above": {
+        "digit_string": [
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999665,
+        "output_fullsum": 0.999665
+      },
+      "below": {
+        "digit_string": [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.997527,
+        "output_fullsum": 0.997527
+      },
+      "differs_from_above": true,
+      "differs_from_below": true,
+      "stable_across_runs": true
+    },
+    {
+      "granularity": 0.01,
+      "control_step": 0.7,
+      "control": {
+        "digit_string": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999089,
+        "output_fullsum": 0.999089
+      },
+      "above": {
+        "digit_string": [
+          0,
+          7,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          7,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999089,
+        "output_fullsum": 0.999665
+      },
+      "below": {
+        "digit_string": [
+          0,
+          6,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          6,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.997527,
+        "output_fullsum": 1.0
+      },
+      "differs_from_above": true,
+      "differs_from_below": true,
+      "stable_across_runs": true
+    },
+    {
+      "granularity": 0.001,
+      "control_step": 0.7,
+      "control": {
+        "digit_string": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999089,
+        "output_fullsum": 0.999089
+      },
+      "above": {
+        "digit_string": [
+          0,
+          7,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          7,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999089,
+        "output_fullsum": 0.999665
+      },
+      "below": {
+        "digit_string": [
+          0,
+          6,
+          9,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          6,
+          9,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.997527,
+        "output_fullsum": 1.0
+      },
+      "differs_from_above": true,
+      "differs_from_below": true,
+      "stable_across_runs": true
+    },
+    {
+      "granularity": 0.0001,
+      "control_step": 0.7,
+      "control": {
+        "digit_string": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999089,
+        "output_fullsum": 0.999089
+      },
+      "above": {
+        "digit_string": [
+          0,
+          7,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          7,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.999089,
+        "output_fullsum": 0.999665
+      },
+      "below": {
+        "digit_string": [
+          0,
+          6,
+          9,
+          9,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "table": [
+          0,
+          6,
+          9,
+          9,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "output_2weight": 0.997527,
+        "output_fullsum": 1.0
+      },
+      "differs_from_above": true,
+      "differs_from_below": true,
+      "stable_across_runs": true
+    }
+  ],
+  "g1_tables": [
+    {
+      "granularity": 0.1,
+      "decimal_places": 1,
+      "nodes": 11,
+      "distinct_tables": 11,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 2,
+      "nodes": 11,
+      "distinct_tables": 11,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 3,
+      "nodes": 11,
+      "distinct_tables": 11,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 6,
+      "nodes": 11,
+      "distinct_tables": 11,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 10,
+      "nodes": 11,
+      "distinct_tables": 11,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.1,
+      "decimal_places": 15,
+      "nodes": 11,
+      "distinct_tables": 11,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 1,
+      "nodes": 101,
+      "distinct_tables": 11,
+      "all_tables_distinct": false
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 2,
+      "nodes": 101,
+      "distinct_tables": 101,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 3,
+      "nodes": 101,
+      "distinct_tables": 101,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 6,
+      "nodes": 101,
+      "distinct_tables": 101,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 10,
+      "nodes": 101,
+      "distinct_tables": 101,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 15,
+      "nodes": 101,
+      "distinct_tables": 101,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 1,
+      "nodes": 1001,
+      "distinct_tables": 11,
+      "all_tables_distinct": false
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 2,
+      "nodes": 1001,
+      "distinct_tables": 101,
+      "all_tables_distinct": false
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 3,
+      "nodes": 1001,
+      "distinct_tables": 1001,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 6,
+      "nodes": 1001,
+      "distinct_tables": 1001,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 10,
+      "nodes": 1001,
+      "distinct_tables": 1001,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 15,
+      "nodes": 1001,
+      "distinct_tables": 1001,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 1,
+      "nodes": 10001,
+      "distinct_tables": 11,
+      "all_tables_distinct": false
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 2,
+      "nodes": 10001,
+      "distinct_tables": 101,
+      "all_tables_distinct": false
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 3,
+      "nodes": 10001,
+      "distinct_tables": 1001,
+      "all_tables_distinct": false
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 6,
+      "nodes": 10001,
+      "distinct_tables": 10001,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 10,
+      "nodes": 10001,
+      "distinct_tables": 10001,
+      "all_tables_distinct": true
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 15,
+      "nodes": 10001,
+      "distinct_tables": 10001,
+      "all_tables_distinct": true
+    }
+  ],
+  "g2_outputs": [
+    {
+      "granularity": 0.1,
+      "decimal_places": 15,
+      "distinct_z_2weight": 10,
+      "distinct_outputs_2weight": 10,
+      "distinct_z_fullsum": 10,
+      "distinct_outputs_fullsum": 10,
+      "outputs_agree_with_z": true
+    },
+    {
+      "granularity": 0.01,
+      "decimal_places": 15,
+      "distinct_z_2weight": 10,
+      "distinct_outputs_2weight": 10,
+      "distinct_z_fullsum": 19,
+      "distinct_outputs_fullsum": 16,
+      "outputs_agree_with_z": false
+    },
+    {
+      "granularity": 0.001,
+      "decimal_places": 15,
+      "distinct_z_2weight": 10,
+      "distinct_outputs_2weight": 10,
+      "distinct_z_fullsum": 28,
+      "distinct_outputs_fullsum": 16,
+      "outputs_agree_with_z": false
+    },
+    {
+      "granularity": 0.0001,
+      "decimal_places": 15,
+      "distinct_z_2weight": 10,
+      "distinct_outputs_2weight": 10,
+      "distinct_z_fullsum": 37,
+      "distinct_outputs_fullsum": 16,
+      "outputs_agree_with_z": false
+    }
+  ],
+  "g3_held_configurations": [
+    {
+      "granularity": 0.1,
+      "steps": 11,
+      "held_configurations": 78
+    },
+    {
+      "granularity": 0.01,
+      "steps": 101,
+      "held_configurations": 5253
+    },
+    {
+      "granularity": 0.001,
+      "steps": 1001,
+      "held_configurations": 502503
+    },
+    {
+      "granularity": 0.0001,
+      "steps": 10001,
+      "held_configurations": 50025003
+    }
+  ],
+  "g4_float64_ceiling": {
+    "interval": [
+      0.0,
+      1.0
+    ],
+    "count_by_bits": 4607182418800017409,
+    "count_by_binade_formula": 4607182418800017409,
+    "match": true,
+    "max_threads": 4607182418800017409,
+    "max_addressable_weight_states": 4607182418800017409,
+    "max_held_configurations": 10613064920049989510069502517551562755
+  }
+}
