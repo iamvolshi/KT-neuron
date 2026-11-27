@@ -187,3 +187,35 @@ Writes `experiments/results-control-surface.json`. The
 human-readable report is `experiments/results-control-surface.md`.
 Script: `experiments/measure_control_surface.py` (one focused
 module, under 500 lines). Seeds: none. No RNG anywhere.
+
+## Addendum (Nov 27): richer readout for G2
+
+The G2 result has one caveat: the graph points to 10,001 distinct
+weight states at g = 0.0001, but the routing toy's 2-weight output
+can only tell 10 apart and the full-sum output 16. The states are
+distinct as weight configurations; the readout is coarse.
+
+This addendum adds a third, richer readout to G2, measured the
+same way (d = 15, each grid). Nothing else changes.
+
+- Definition (fixed before measuring): the linear readout is the
+  dot product of the table's full weight vector (the digit string,
+  length n = d + 1) with fixed positional weights, powers of 10:
+  w_i = 10^(n-1-i) for position i in 0..n-1. This reconstructs
+  the digit string's numeric value scaled by 10^d: the integer
+  whose decimal digits are the table's digits. Computed with
+  exact integer arithmetic (no float rounding), so the readout
+  value is a pure function of the digit string. The readout's
+  output IS that reconstructed number (no sigmoid squash, which
+  would saturate at these magnitudes); distinct outputs are
+  distinct reconstructed values.
+- Measurement: count distinct linear-readout outputs across the
+  tables at each grid, d = 15. Expectation, not an assumption:
+  all tables separate, because the tables are distinct strings
+  and the readout is injective on digit strings. The count is
+  MEASURED, and if it comes out lower than the distinct-table
+  count, that is reported honestly and the readout is not
+  adjusted to force it.
+- The new readout joins the 2-weight and full-sum outputs in G2.
+  Determinism (W5) covers it automatically, since g2_outputs is
+  in the pure measurements run twice.

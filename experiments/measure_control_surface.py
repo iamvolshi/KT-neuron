@@ -158,17 +158,32 @@ def g1_tables(g, d):
 
 
 def g2_outputs(g, d):
-    """Distinct outputs on input (1, 1): 2-weight and full-sum conventions."""
+    """Distinct outputs on input (1, 1): 2-weight, full-sum, linear readouts.
+
+    The linear readout is the dot product of the table's full weight
+    vector with fixed positional weights, powers of 10: w_i =
+    10^(n-1-i) for position i in 0..n-1, n = d + 1. It reconstructs
+    the digit string's numeric value scaled by 10^d (the integer
+    whose decimal digits are the table's digits), computed with
+    exact integer arithmetic. Its output IS that reconstructed
+    number (no sigmoid squash, which would saturate); distinct
+    outputs are distinct reconstructed values.
+    """
     tables = [digit_string(v, d) for v in steps(g)]
     z2 = sorted({t[0] + t[1] for t in tables})
     zsum = sorted({sum(t) for t in tables})
     out2 = sorted({round(sigmoid(z), 6) for z in z2})
     outsum = sorted({round(sigmoid(z), 6) for z in zsum})
+    n = d + 1
+    weights = [10 ** (n - 1 - i) for i in range(n)]
+    zlin = sorted({sum(w * x for w, x in zip(weights, t)) for t in tables})
     return {"granularity": g, "decimal_places": d,
             "distinct_z_2weight": len(z2),
             "distinct_outputs_2weight": len(out2),
             "distinct_z_fullsum": len(zsum),
             "distinct_outputs_fullsum": len(outsum),
+            "distinct_z_linear": len(zlin),
+            "distinct_outputs_linear": len(zlin),
             "outputs_agree_with_z": (len(out2) == len(z2)
                                      and len(outsum) == len(zsum))}
 
@@ -322,7 +337,8 @@ def main():
     for r in results["g2_outputs"]:
         print(f"G2 g={r['granularity']}: distinct_2weight="
               f"{r['distinct_outputs_2weight']} distinct_fullsum="
-              f"{r['distinct_outputs_fullsum']}")
+              f"{r['distinct_outputs_fullsum']} distinct_linear="
+              f"{r['distinct_outputs_linear']}")
     for r in results["g3_held_configurations"]:
         print(f"G3 g={r['granularity']}: held={r['held_configurations']}")
     c = results["g4_float64_ceiling"]

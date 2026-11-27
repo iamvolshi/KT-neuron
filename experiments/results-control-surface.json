@@ -1218,6 +1218,8 @@
       "distinct_outputs_2weight": 10,
       "distinct_z_fullsum": 10,
       "distinct_outputs_fullsum": 10,
+      "distinct_z_linear": 11,
+      "distinct_outputs_linear": 11,
       "outputs_agree_with_z": true
     },
     {
@@ -1227,6 +1229,8 @@
       "distinct_outputs_2weight": 10,
       "distinct_z_fullsum": 19,
       "distinct_outputs_fullsum": 16,
+      "distinct_z_linear": 101,
+      "distinct_outputs_linear": 101,
       "outputs_agree_with_z": false
     },
     {
@@ -1236,6 +1240,8 @@
       "distinct_outputs_2weight": 10,
       "distinct_z_fullsum": 28,
       "distinct_outputs_fullsum": 16,
+      "distinct_z_linear": 1001,
+      "distinct_outputs_linear": 1001,
       "outputs_agree_with_z": false
     },
     {
@@ -1245,6 +1251,8 @@
       "distinct_outputs_2weight": 10,
       "distinct_z_fullsum": 37,
       "distinct_outputs_fullsum": 16,
+      "distinct_z_linear": 10001,
+      "distinct_outputs_linear": 10001,
       "outputs_agree_with_z": false
     }
   ],

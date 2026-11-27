@@ -1,8 +1,9 @@
 # Results: the slow-trace volume as a control surface
 
 Date: 2026-11-27. Preregistration:
-`experiments/preregistration-control-surface.md`. Script:
-`experiments/measure_control_surface.py` (334 lines). Machine-readable
+`experiments/preregistration-control-surface.md` (plus the Nov 27
+addendum: richer readout for G2). Script:
+`experiments/measure_control_surface.py` (350 lines). Machine-readable
 results: `experiments/results-control-surface.json`.
 
 Command (from `~/workspace/kt-neuron-repo`):
@@ -134,21 +135,25 @@ d = 1, 101 at d = 2, 1001 at d = 3).
 Distinct outputs on input (1, 1) at d = 15. The 2-weight output
 is the routing test's convention (sigmoid of the table's first
 two weights); the full-sum output is sigmoid of the sum of all
-the table's weights.
+the table's weights. The linear readout (Nov 27 addendum) is the
+dot product of the table's full weight vector with fixed
+positional weights, powers of 10, which reconstructs the digit
+string's numeric value; its output is that number itself, exact
+integer arithmetic, no sigmoid squash.
 
-| granularity g | distinct 2-weight outputs | distinct full-sum outputs |
-|---:|---:|---:|
-| 0.1 | 10 | 10 |
-| 0.01 | 10 | 16 |
-| 0.001 | 10 | 16 |
-| 0.0001 | 10 | 16 |
+| granularity g | distinct 2-weight outputs | distinct full-sum outputs | distinct linear-readout outputs |
+|---:|---:|---:|---:|
+| 0.1 | 10 | 10 | 11 |
+| 0.01 | 10 | 16 | 101 |
+| 0.001 | 10 | 16 | 1001 |
+| 0.0001 | 10 | 16 | 10001 |
 
 Read plainly: the graph points to 10,001 distinct weight states
-at g = 0.0001, but the routing toy's 2-weight output can only
-tell 10 of them apart, and the full-sum output 16. The states
-are distinct as weight configurations; the toy's readout is
-coarse. A richer readout would separate more of them; that is
-not claimed here.
+at g = 0.0001, and the linear readout tells all 10,001 apart,
+at every grid measured. The earlier caveat is removed: the
+2-weight and full-sum readouts stay coarse (10 and 16), but the
+states are distinct as weight configurations AND as linear-readout
+outputs. The behaviour matches the structure.
 
 ## G3: held configurations (pairs)
 
